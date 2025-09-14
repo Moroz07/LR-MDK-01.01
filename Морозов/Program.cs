@@ -10,6 +10,7 @@ namespace Морозов
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Гитхаю One Love <3");
         }
     }
 }
