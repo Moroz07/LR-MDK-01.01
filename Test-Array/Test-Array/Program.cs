@@ -27,7 +27,19 @@ namespace Test_Array
             massiv[1] = array[1];
             massiv[2] = array[0];
 
+            int[] massa = new int[10000];
+            for (int i = 0; i < massa.Length; i++)
+            {
+                massa[i] = i+1;
+            }
 
+            Console.Write("[");
+            for (int i =0; i < massa.Length-1;i++)
+            {
+                Console.Write(massa[i] + ",");
+            }
+            Console.Write(massa.Length+"]");
+        
         }
     }
 }
