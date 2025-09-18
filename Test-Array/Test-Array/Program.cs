@@ -17,6 +17,11 @@ namespace Test_Array
 
             array[1] = "MC OG";
 
+            foreach (string show in array)
+            {
+                Console.WriteLine(show);
+            }
+
         }
     }
 }
