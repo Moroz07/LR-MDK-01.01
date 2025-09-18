@@ -15,6 +15,8 @@ namespace Test_Array
             array[1] = "brr";
             array[2] = "Patapim";
 
+            array[1] = "MC OG";
+
         }
     }
 }
