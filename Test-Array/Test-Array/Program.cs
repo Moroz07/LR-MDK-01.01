@@ -28,18 +28,33 @@ namespace Test_Array
             massiv[2] = array[0];
 
             int[] massa = new int[10000];
+            //for (int i = 0; i < massa.Length; i++)
+            //{
+            //    massa[i] = i + 1;
+            //}
+
+            //Console.Write("[");
+            //for (int i = 0; i < massa.Length - 1; i++)
+            //{
+            //    Console.Write(massa[i] + ",");
+            //}
+            //Console.Write(massa.Length + "]");
+
             for (int i = 0; i < massa.Length; i++)
             {
-                massa[i] = i+1;
+                massa[i] = (i + 1) * 2;
             }
 
             Console.Write("[");
-            for (int i =0; i < massa.Length-1;i++)
+            for (int i = 0; i < massa.Length - 1; i++)
             {
                 Console.Write(massa[i] + ",");
             }
-            Console.Write(massa.Length+"]");
-        
+            Console.Write(massa.Length * 2 + "]");
+
+
+
+
         }
     }
 }
