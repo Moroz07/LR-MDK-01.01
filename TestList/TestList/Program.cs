@@ -16,6 +16,10 @@ namespace TestList
             Text.Add("Top");
             Text.Add("Do dep");
             Text.Add("Nikita");
+
+            Console.WriteLine("Введите текст: ");
+            string input = Console.ReadLine();
+            Console.WriteLine(input);
         }
     }
 }
