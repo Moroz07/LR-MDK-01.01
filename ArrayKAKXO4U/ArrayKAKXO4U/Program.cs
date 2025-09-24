@@ -22,6 +22,7 @@ namespace ArrayKAKXO4U
             {
                 Console.WriteLine(i + "");
             }
+
         }
     }
 }
