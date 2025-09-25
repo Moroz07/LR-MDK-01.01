@@ -18,8 +18,24 @@ namespace LAB1
                 array[i] = Convert.ToInt32(Console.ReadLine());
             }
             Console.WriteLine();
-            
-            
+
+            //foreach (int element in array)
+            //{
+            //    Console.WriteLine(element);
+            //}
+
+            int max = 0;
+            int index = 0;
+            for (int i = 0; i < Length; i++)
+            {
+                if (max < array[i])
+                {
+                    max = array[i];
+                    index = i;
+                }
+            }
+            Console.WriteLine("Максимальное число равно: " + max);
+            Console.WriteLine("Его индекс: " + index);
 
         }
     }
