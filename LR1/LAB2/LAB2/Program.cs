@@ -22,6 +22,24 @@ namespace LAB2
             //{
             //    Console.Write(element + " ");
             //}
+
+            for (int i = 0; i< array.Length; i++)
+            {
+                for (int number = 1; i < array.Length; i++)
+                {
+                    if (number == array[i])
+                    {
+                        int p = 0;
+                        p++;
+                        if (p == 1)
+                        {
+                            Console.WriteLine("Единожды встречающееся число: " + number);
+                        }
+                    }
+                    number++;
+                }
+
+            }
         }
     }
 }
