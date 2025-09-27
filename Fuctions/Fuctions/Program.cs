@@ -10,7 +10,7 @@ namespace Fuctions
     {
         static void Main(string[] args)
         {
-
+            ListStringsModule.FillingTheList();
         }
     }
 }
