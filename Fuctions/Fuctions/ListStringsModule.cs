@@ -18,6 +18,7 @@ namespace Fuctions
                 Console.WriteLine("Введите " + (i+1) + " элемент списка");
                 list.Add(Console.ReadLine());
             }
+            Console.WriteLine();
             return list;
        }
     }

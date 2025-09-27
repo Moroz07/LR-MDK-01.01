@@ -10,7 +10,11 @@ namespace Fuctions
     {
         static void Main(string[] args)
         {
-            ListStringsModule.FillingTheList();
+            List<string> list = ListStringsModule.FillingTheList();
+            Console.WriteLine("Последний элемент списка: " + list.Last());
+            Console.WriteLine("Размер списка: " + list.Count);
+
+
         }
     }
 }
