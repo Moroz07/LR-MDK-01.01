@@ -21,5 +21,12 @@ namespace Fuctions
             Console.WriteLine();
             return list;
        }
+
+        static public List<int> FindTextInList(string lines, List<string>List)
+        {
+            List<int> index = new List<int>();
+                
+        }
+
     }
 }
