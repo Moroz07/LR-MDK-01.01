@@ -48,7 +48,20 @@ namespace LAB2
                 }
             }
             Console.WriteLine();
-            
+            Console.WriteLine("Числа встречающиеся 1 раз: ");
+            Console.Write("[");
+            for (int i = 0; i < Numbers.Count - 1; i++)
+            {
+                Console.Write(Numbers[i] + ",");
+            }
+            if (Numbers.Count != 0)
+            {
+                Console.Write(Numbers.Last() + ".]");
+            }
+            else
+            {
+                Console.Write("Нет повторяющихся чисел]");
+            }
         }
     }  
 }
