@@ -29,6 +29,26 @@ namespace LAB2
             {
                 number[i] = i + 1;
             }
-        }  
-    }
+
+            List<int> Numbers = new List<int>();
+            for (int j = 0; j < number.Length; j++)
+            {
+                int index = 0;
+                int numbers = number[j];
+                for (int i = 0; i < array.Length; i++)
+                {
+                    if (numbers == array[i])
+                    {
+                        index++;
+                    }
+                }
+                if (index == 1)
+                {
+                    Numbers.Add(numbers);
+                }
+            }
+            Console.WriteLine();
+            
+        }
+    }  
 }
