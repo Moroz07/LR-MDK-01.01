@@ -25,7 +25,7 @@ namespace LAB1
             //    Console.WriteLine(element);
             //}
 
-            int max = -1999999999;
+            int max = int.MinValue;
             int index = 0;
             for (int i = 0; i < Length; i++)
             {
