@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,32 +15,20 @@ namespace LAB2
             Random rand = new Random();
             for (int i = 0; i < array.Length; i++)
             {
-                
+
                 array[i] = rand.Next(1, 200);
             }
 
-            //foreach(int element in array)
-            //{
-            //    Console.Write(element + " ");
-            //}
-
-            for (int i = 0; i< array.Length; i++)
+            foreach (int element in array)
             {
-                for (int number = 1; i < array.Length; i++)
-                {
-                    if (number == array[i])
-                    {
-                        int p = 0;
-                        p++;
-                        if (p == 1)
-                        {
-                            Console.WriteLine("Единожды встречающееся число: " + number);
-                        }
-                    }
-                    number++;
-                }
-
+                Console.Write(element + " ");
             }
-        }
+
+            int[] number = new int[200];
+            for (int i = 0; i < number.Length; i++)
+            {
+                number[i] = i + 1;
+            }
+        }  
     }
 }
