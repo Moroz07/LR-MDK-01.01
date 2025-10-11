@@ -25,13 +25,13 @@ namespace VARIANT_5
 
 
         static public (List<string>, List<int>) FindAllGamesByCenre(int indexGenre,
-                                                                 List<string>[] allBooks,
+                                                                 List<string>[] allGames,
                                                                  List<int>[] counts)
         {
             List<string> gamesByGenre = new List<string>();
             List<int> countsByGenre = new List<int>();
 
-            gamesByGenre = allBooks[indexGenre];
+            gamesByGenre = allGames[indexGenre];
             countsByGenre = counts[indexGenre];
 
             return (gamesByGenre, countsByGenre);

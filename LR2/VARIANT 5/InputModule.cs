@@ -55,6 +55,8 @@ namespace VARIANT_5
             counts[2].Add(670000);
             gamesByGenre[2].Add("BioShock");
             counts[2].Add(175000);
+
+            return (gamesByGenre, counts);
         }
 
         static public string InputUserQuery()
