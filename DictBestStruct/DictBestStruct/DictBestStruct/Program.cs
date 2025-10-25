@@ -11,6 +11,7 @@ namespace DictBestStruct
         static void Main(string[] args)
         {
             Dictionary<string, List<string>> dict = new Dictionary<string, List<string>>();
+
         }
     }
 }
