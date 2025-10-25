@@ -16,6 +16,11 @@ namespace DictBestStruct
             dict.Add("Головоломки", new List<string>() { "Machinarium", "Portal 2", "Patric's Parabox" });
 
             Console.Write(string.Join(", ",dict.Keys));
+            Console.WriteLine();
+
+           List <string> value = dict["Головоломки"];
+                Console.Write(string.Join(", ", value));
+            
         }
     }
 }
