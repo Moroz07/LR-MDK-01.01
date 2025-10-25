@@ -14,6 +14,8 @@ namespace DictBestStruct
             dict.Add("Шутер", new List<string>() {"Valorant"});
             dict.Add("Приключение", new List<string>() { "ROBLOX(Ведьмак 4)", "The Last Of Us 2" });
             dict.Add("Головоломки", new List<string>() { "Machinarium", "Portal 2", "Patric's Parabox" });
+
+            Console.Write(string.Join(", ",dict.Keys));
         }
     }
 }
