@@ -45,12 +45,33 @@ namespace Test_Array
                 massa[i] = (i + 1) * 2;
             }
 
-            Console.Write("[");
+            //Console.Write("[");
+            //for (int i = 0; i < massa.Length - 1; i++)
+            //{
+            //    Console.Write(massa[i] + ",");
+            //}
+            //Console.Write(massa.Length * 2 + "]");
+
+            for (int i = 0; i < massa.Length; i++)
+            {
+                int l = 0;
+                for (int j = 0; j < massa.Length; j++)
+                {
+                    if (massa[i] + massa[j]==massa.Length-1)
+                    {
+                        l = massa[i];
+                        massa[i] = massa[j];
+                        massa[j] = l;
+                    }
+                }
+               
+            }
+
+
             for (int i = 0; i < massa.Length - 1; i++)
             {
                 Console.Write(massa[i] + ",");
             }
-            Console.Write(massa.Length * 2 + "]");
 
 
 
