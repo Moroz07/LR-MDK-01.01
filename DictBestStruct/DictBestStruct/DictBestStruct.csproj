@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C3368CA3-14BF-4502-B393-60C17DE3D17D}</ProjectGuid>
+    <ProjectGuid>{335C8EEF-FDBC-498B-ABF8-FE0B3C9AAA94}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>DictBestStruct</RootNamespace>
     <AssemblyName>DictBestStruct</AssemblyName>
