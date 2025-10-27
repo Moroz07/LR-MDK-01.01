@@ -8,8 +8,9 @@ namespace VARIANT_5
 {
     public class InputModule
     {
-        
-
-       
+        static public (List<string>[], List<int>[]) InputGamesByCenre()
+        {
+           
+        }
     }
 }
