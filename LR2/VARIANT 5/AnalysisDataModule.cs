@@ -31,7 +31,13 @@ namespace VARIANT_5
 
         static public double CalculateAverage(List<int> counts)
         {
-            
+            int sum = 0;
+            foreach (int count in counts)
+            {
+                sum += count;
+            }
+
+            return sum / counts.Count;
         }
 
     }
