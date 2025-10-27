@@ -57,6 +57,12 @@ namespace VARIANT_5
             counts[2].Add(175000);
 
             return (gamesByGenre, counts);
+
+
+        }
+        static public string InputUserQuery()
+        {
+            
         }
     }
 }
