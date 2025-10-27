@@ -22,8 +22,13 @@ namespace VARIANT_5
             return -1;
         }
 
+        static public (List<string>, List<int>) FindAllGamesByCenre(int indexGenre,
+                                                         List<string>[] allGames,
+                                                         List<int>[] counts)
+        {
+            
+        }
 
 
-        
     }
 }
