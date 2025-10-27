@@ -37,7 +37,8 @@ namespace VARIANT_5
             AnalysisDataModule.SortGames(gamesUserGenre, countsUserGenre);
             Print(gamesUserGenre);
             Prints(countsUserGenre);
-            
+
+
         }
     }
 }
