@@ -29,6 +29,10 @@ namespace VARIANT_5
             }
         }
 
-        
+        static public double CalculateAverage(List<int> counts)
+        {
+            
+        }
+
     }
 }
