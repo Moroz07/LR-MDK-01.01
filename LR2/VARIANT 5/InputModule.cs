@@ -62,7 +62,8 @@ namespace VARIANT_5
         }
         static public string InputUserQuery()
         {
-            
+            Console.Write("Введите, пожалуйста, жанр (Экшн/Стратегия/Шутер): ");
+            return Console.ReadLine();
         }
     }
 }
