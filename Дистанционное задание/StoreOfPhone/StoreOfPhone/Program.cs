@@ -10,6 +10,9 @@ namespace StoreOfPhone
     {
         static void Main(string[] args)
         {
+            List<Phone> sales = new List<Phone>();
+
+            
         }
     }
 }
