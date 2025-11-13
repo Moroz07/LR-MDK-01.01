@@ -25,6 +25,12 @@ namespace StoreOfPhone
             return AmountSum;
         }
 
+        public static (string, string) TopSalePhone(List<Phone> SalesPhone)
+        {
+            
+
+        }
+
         static void Main(string[] args)
         {
             List<Phone> sales = new List<Phone>();
