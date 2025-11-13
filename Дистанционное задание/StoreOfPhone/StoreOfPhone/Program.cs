@@ -54,7 +54,34 @@ namespace StoreOfPhone
 
         public static void TopTwoPhone(List<Phone> phones)
         {
-            
+            string topPhones1 = "";
+            string topPhones2 = "";
+            double maxProfit1 = 0;
+            double maxProfit2 = 0;
+
+            foreach (var phone in phones)
+            {
+                double profit = phone.price * phone.count;
+
+                if (profit > maxProfit1)
+                {
+                    maxProfit2 = maxProfit1;
+                    topPhones2 = topPhones1;
+
+                    maxProfit1 = profit;
+                    topPhones1 = phone.name;
+                }
+
+                else if (profit > maxProfit2)
+                {
+                    maxProfit2 = profit;
+                    topPhones2 = phone.name;
+                }
+            }
+
+            Console.WriteLine("Два самых прибыльных телефона: ");
+            Console.WriteLine($"1. " + topPhones1 + " " + maxProfit1);
+            Console.WriteLine($"2. " + topPhones2 + " " + maxProfit2);
         }
 
         static void Main(string[] args)
