@@ -8,6 +8,12 @@ namespace StoreOfPhone
 {
     class Program
     {
+
+        public static double AmountSale(List<Phone> SalesPhone)
+        {
+            
+        }
+
         static void Main(string[] args)
         {
             List<Phone> sales = new List<Phone>();
