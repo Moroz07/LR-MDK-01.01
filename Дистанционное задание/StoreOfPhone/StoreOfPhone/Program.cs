@@ -52,6 +52,11 @@ namespace StoreOfPhone
 
         }
 
+        public static void TopTwoPhone(List<Phone> phones)
+        {
+            
+        }
+
         static void Main(string[] args)
         {
             List<Phone> sales = new List<Phone>();
