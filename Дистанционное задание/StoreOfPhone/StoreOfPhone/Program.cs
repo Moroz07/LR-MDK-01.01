@@ -11,7 +11,18 @@ namespace StoreOfPhone
 
         public static double AmountSale(List<Phone> SalesPhone)
         {
-            
+            DateTime startDate = new DateTime(2025, 11, 1);
+            DateTime EndDate = new DateTime(2025, 11, 12);
+            double AmountSum = 0;
+            foreach (var sale in SalesPhone)
+            {
+                if ((sale.SellData >= startDate) && (sale.SellData <= EndDate))
+                {
+                    AmountSum += sale.price * sale.count;
+                }
+            }
+
+            return AmountSum;
         }
 
         static void Main(string[] args)
