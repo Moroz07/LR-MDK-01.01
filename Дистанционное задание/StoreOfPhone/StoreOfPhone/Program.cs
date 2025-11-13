@@ -168,6 +168,10 @@ namespace StoreOfPhone
             sales.Add(iphone8);
             sales.Add(Google9);
             sales.Add(redmi10);
+
+            Console.WriteLine(AmountSale(sales));
+            Console.WriteLine("Самый продаваемый телефон и телефон с наименьшим фактом продаж: " + TopSalePhone(sales));
+            TopTwoPhone(sales);
         }
     }
 }
