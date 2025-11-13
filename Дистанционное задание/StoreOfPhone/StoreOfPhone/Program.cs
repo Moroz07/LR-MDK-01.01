@@ -27,7 +27,28 @@ namespace StoreOfPhone
 
         public static (string, string) TopSalePhone(List<Phone> SalesPhone)
         {
-            
+            string phoneTopSell = "";
+            string phoneMinSell = "";
+            double countPhone = 0;
+            double countPhoneMin = int.MaxValue;
+            foreach (var phone in SalesPhone)
+            {
+
+                if (countPhone < phone.count)
+                {
+                    countPhone = phone.count;
+                    phoneTopSell = phone.name;
+                }
+
+                if (countPhoneMin > phone.count)
+                {
+                    countPhoneMin = phone.count;
+                    phoneMinSell = phone.name;
+                }
+
+
+            }
+            return (phoneTopSell, phoneMinSell);
 
         }
 
