@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace LR2_NEW
 {
+
+
     class Function
     {
         //public static double TopSellPhone(List<Phone> salesPhones)
