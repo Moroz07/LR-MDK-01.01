@@ -8,5 +8,6 @@ namespace LR2_NEW
 {
     class Function
     {
+
     }
 }
