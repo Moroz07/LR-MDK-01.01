@@ -56,7 +56,7 @@ namespace LR2_NEW
             sales.Add(new Phone { brand = "Xiaomi", model = "POCO X7 PRO", week = 3, countSell = 2 });
             sales.Add(new Phone { brand = "Xiaomi", model = "POCO X7 PRO", week = 4, countSell = 3 });
 
-            
+            Function.ShowTopPhones(sales);
 
 
         }
