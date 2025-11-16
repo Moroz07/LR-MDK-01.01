@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,59 +12,60 @@ namespace LR2_NEW
 
     class Function
     {
-        //public static double TopSellPhone(List<Phone> salesPhones)
-        //{
-        //    Console.WriteLine("Введите марку телефона и получите статистику(Samsung, Iphone, Xiaomi): ");
-        //    string Company = Console.ReadLine();
 
-        //        foreach (var phone in salesPhones)
-        //        {
-        //        if (phone.brand == Company)
-        //        {
-                    
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("Такого бренда нету в магазине");
-        //            break;
-        //        }
-        //        }
-        //    return
-            
-        //}
-
-        public static List <double> AverageSale(List<Phone> phones)
+        public static void ShowTopPhones(List<Phone> phones)
         {
-            List<double> average = new List<double>();
-            double count = 0;
-            foreach (var phone in phones)
-            {
-                for(int i=1; phone.week >= i; i++)
-                {
-                    count += phone.countSell;
-                }
-                average.Add(count);
-            }
-            List<double>  Copy = new List<double>(average);
+            Console.WriteLine("Введите марку телефона (Samsung, Iphone, Xiaomi): ");
+            string brand = Console.ReadLine();
 
-            for (int i = 0; i < Copy.Count - 1; i++)
+            Dictionary<string, int> modelSales = new Dictionary<string, int>();
+            foreach (Phone phone in phones)
             {
-                for (int j = i + 1; j < Copy.Count; j++)
+                if (phone.brand == brand)
                 {
-                    if (Copy[j] > Copy[i])
+                    if (modelSales.ContainsKey(phone.model))
                     {
-                        double value = Copy[i];
-                        Copy[i] = Copy[j];
-                        Copy[j] = value;
+                        modelSales[phone.model] += phone.countSell;
+                    }
+                    else
+                    {
+                        modelSales.Add(phone.model, phone.countSell);
                     }
                 }
             }
-            for (int i = 0; i < 10; i++)
+
+            if (modelSales.Count == 0)
             {
-                Console.WriteLine($"{Copy[i]}");
-                
+                Console.WriteLine("Такого бренда нету в магазине");
+                return;
             }
-            return average;
+
+            string[] modelName = new string[modelSales.Count];
+            modelSales.Keys.CopyTo(modelName, 0);
+
+            for (int i = 0; i < modelName.Length - 1; i++)
+            {
+                for (int j = 0; j < modelName.Length - 1 - i; j++)
+                {
+                    double sales1 = (double)modelSales[modelName[j]] / 4;
+                    double sales2 = (double)modelSales[modelName[j + 1]] / 4;
+
+                    if (sales1 < sales2)
+                    {
+                        string temp = modelName[j];
+                        modelName[j] = modelName[j + 1];
+                        modelName[j + 1] = temp;
+                    }
+                }
+            }
+
+            Console.WriteLine($"Модели бренда {brand}: ");
+            for (int i = 0; i < modelName.Length; i++)
+            {
+                double average = (double)modelSales[modelName[i]] / 4;
+                Console.WriteLine($"{modelName[i]} , {average} шт");
+            }
         }
     }
 }
+
