@@ -13,6 +13,7 @@ namespace NFS_Console
             Car Auto = new Car();
             Auto.SetModel("Lada");
             Console.WriteLine(Auto.GetModel());
+            Auto.SetSpeed(150);
         }
     }
 }
