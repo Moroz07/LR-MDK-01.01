@@ -23,6 +23,10 @@ namespace NFS_Console
             merc.SetModel("Mercedes");
             merc.SetSpeed(300);
             PrintModel(merc);
+
+            List<Car> cars = new List<Car>();
+            cars.Add(auto);
+            cars.Add(merc);
         }
     }
 }
