@@ -1,6 +1,7 @@
 ﻿
 
 using System.Management.Instrumentation;
+using System.Security.Cryptography.X509Certificates;
 
 namespace NFS_Console
 {
@@ -22,6 +23,10 @@ namespace NFS_Console
         public void SetSpeed(double speed)
         {
             speed_ = speed;
+        }
+        public double GetSpeed()
+        {
+            return speed_;
         }
 
     }   
