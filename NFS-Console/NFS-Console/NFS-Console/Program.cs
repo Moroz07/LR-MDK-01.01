@@ -10,6 +10,9 @@ namespace NFS_Console
     {
         static void Main(string[] args)
         {
+            Car Auto = new Car();
+            Auto.SetModel("Lada");
+            Console.WriteLine(Auto.GetModel());
         }
     }
 }
