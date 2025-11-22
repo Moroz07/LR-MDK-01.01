@@ -9,80 +9,7 @@ namespace StoreOfPhone
     class Program
     {
 
-        public static double AmountSale(List<Phone> SalesPhone)
-        {
-            DateTime startDate = new DateTime(2025, 11, 1);
-            DateTime EndDate = new DateTime(2025, 11, 12);
-            double AmountSum = 0;
-            foreach (var sale in SalesPhone)
-            {
-                if ((sale.SellData >= startDate) && (sale.SellData <= EndDate))
-                {
-                    AmountSum += sale.price * sale.count;
-                }
-            }
-
-            return AmountSum;
-        }
-
-        public static (string, string) TopSalePhone(List<Phone> SalesPhone)
-        {
-            string phoneTopSell = "";
-            string phoneMinSell = "";
-            double countPhone = 0;
-            double countPhoneMin = int.MaxValue;
-            foreach (var phone in SalesPhone)
-            {
-
-                if (countPhone < phone.count)
-                {
-                    countPhone = phone.count;
-                    phoneTopSell = phone.name;
-                }
-
-                if (countPhoneMin > phone.count)
-                {
-                    countPhoneMin = phone.count;
-                    phoneMinSell = phone.name;
-                }
-
-
-            }
-            return (phoneTopSell, phoneMinSell);
-
-        }
-
-        public static void TopTwoPhone(List<Phone> phones)
-        {
-            string topPhones1 = "";
-            string topPhones2 = "";
-            double maxProfit1 = 0;
-            double maxProfit2 = 0;
-
-            foreach (var phone in phones)
-            {
-                double profit = phone.price * phone.count;
-
-                if (profit > maxProfit1)
-                {
-                    maxProfit2 = maxProfit1;
-                    topPhones2 = topPhones1;
-
-                    maxProfit1 = profit;
-                    topPhones1 = phone.name;
-                }
-
-                else if (profit > maxProfit2)
-                {
-                    maxProfit2 = profit;
-                    topPhones2 = phone.name;
-                }
-            }
-
-            Console.WriteLine("Два самых прибыльных телефона: ");
-            Console.WriteLine($"1. " + topPhones1 + " " + maxProfit1);
-            Console.WriteLine($"2. " + topPhones2 + " " + maxProfit2);
-        }
+        
 
         static void Main(string[] args)
         {
@@ -158,6 +85,13 @@ namespace StoreOfPhone
             redmi10.SellData = new DateTime(2025, 11, 10);
             redmi10.count = 3;
 
+            Phone samsung11 = new Phone();
+
+            samsung11.name = "Samsung galaxy s25 ultra";
+            samsung11.price = 95000;
+            samsung11.SellData = new DateTime(2025, 11, 5);
+            samsung11.count = 3;
+
             sales.Add(redmi1);
             sales.Add(samsung2);
             sales.Add(pova3);
@@ -168,10 +102,14 @@ namespace StoreOfPhone
             sales.Add(iphone8);
             sales.Add(Google9);
             sales.Add(redmi10);
+            sales.Add(samsung11);
 
-            Console.WriteLine(AmountSale(sales));
-            Console.WriteLine("Самый продаваемый телефон и телефон с наименьшим фактом продаж: " + TopSalePhone(sales));
-            TopTwoPhone(sales);
+            double TotalAmount = Function.AmountSale(sales);
+            Console.WriteLine(TotalAmount);
+            var (phoneTopSell, phoneMinSell) = Function.TopSalePhone(sales);
+            Console.WriteLine("Самый продаваемый телефон: " + phoneTopSell);
+            Console.WriteLine("Самый непродаваемый телефон: " + phoneMinSell);
+            Function.TopTwoPhone(sales);
         }
     }
 }
