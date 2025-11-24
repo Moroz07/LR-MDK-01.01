@@ -47,15 +47,15 @@ namespace NFS_Console
         {
             Car auto = new Car();
             auto.SetModel("Lada");
-            auto.SetSpeed(1000);
+            auto.SetSpeed(270);
 
             Car merc = new Car();
             merc.SetModel("Mercedes");
-            merc.SetSpeed(300);
+            merc.SetSpeed(320);
 
             Car audi = new Car();
             audi.SetModel("Audi");
-            audi.SetSpeed(250);
+            audi.SetSpeed(300);
 
             Car ford = new Car();
             ford.SetModel("Ford");
