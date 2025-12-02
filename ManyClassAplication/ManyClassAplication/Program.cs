@@ -47,6 +47,7 @@ namespace ManyClassAplication
             row3.Quantity = 70;
             row3.Price = 812;
 
+
             report.AddRecord(row1);
             report.AddRecord(row2);
             report.AddRecord(row3);
