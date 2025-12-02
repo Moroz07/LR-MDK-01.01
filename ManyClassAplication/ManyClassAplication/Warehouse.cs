@@ -10,38 +10,37 @@ namespace ManyClassAplication
 {
     class Warehouse
     {
-        private int identifier_;
+        private int id_;
         private string location_;
-        private Dictionary<Goods, int> productsCount_ = new Dictionary<Goods, int>();
+        private Dictionary<Goods, int> products_ = new Dictionary<Goods, int>();
 
-        public void SetIdentifier(int identifier)
+        public void SetId(int id)
         {
-            identifier_ = identifier;
+            id_ = id;
         }
-
-        public int GetIdentifier()
-        {
-            return identifier_;
-        }
-
         public void SetLocation(string location)
         {
             location_ = location;
         }
-
-        public string GetLocation()
+        public void SetProductQuantity(Goods product, int quantity)
         {
-            return location_;
+            products_.Add(product, quantity);
         }
-
-        public void SetProductCount(Goods product, int count)
+        public void GetProductQuantity()
         {
-            productsCount_.Add(product, count);
+            foreach (Goods product in products_.Keys)
+            {
+                Console.WriteLine(product.GetName() + " - " + products_[product]);
+            }
         }
-
-        public Dictionary<Goods, int> GetProductCount()
+        public void CalculateMoney()
         {
-            return productsCount_;
+            double sum = 0;
+            foreach (Goods product in products_.Keys)
+            {
+                sum += product.GetPrice() * products_[product];
+            }
+            Console.WriteLine(sum);
         }
     }
 }

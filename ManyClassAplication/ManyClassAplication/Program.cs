@@ -19,20 +19,43 @@ namespace ManyClassAplication
             car2.SetPrice(10000000);
 
             Warehouse storage = new Warehouse();
-            storage.SetIdentifier(1);
+            storage.SetId(1);
             storage.SetLocation("Торжок, Студенческая 3.");
-            storage.SetProductCount(car1, 2);
-            storage.SetProductCount(car2, 5);
+            storage.SetProductQuantity(car1, 2);
+            storage.SetProductQuantity(car2, 5);
 
-           
-           Console.WriteLine("Адрес склада: " + storage.GetLocation());
-           Console.WriteLine("Идентификатор склада: " + storage.GetIdentifier());
-           foreach(Goods car in storage.GetProductCount().Keys)
-           {
-                
-                Console.WriteLine();
-           }    
-            
+
+            storage.GetProductQuantity();
+            storage.CalculateMoney();
+
+            Console.WriteLine();
+
+            Report report = new Report();
+
+            ReportRow row1 = new ReportRow();
+            row1.Product = "ШЕРШУЛЯ";
+            row1.Quantity = 500;
+            row1.Price = 100;
+
+            ReportRow row2 = new ReportRow();
+            row2.Product = "КРОШИКИ";
+            row2.Quantity = 100;
+            row2.Price = 4122;
+
+            ReportRow row3 = new ReportRow();
+            row3.Product = "PIB";
+            row3.Quantity = 70;
+            row3.Price = 812;
+
+            report.AddRecord(row1);
+            report.AddRecord(row2);
+            report.AddRecord(row3);
+
+            report.ToString();
+            Console.WriteLine();
+
+            report.CalculateSum();
+
         }
     }
 }

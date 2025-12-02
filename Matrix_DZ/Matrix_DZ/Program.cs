@@ -40,11 +40,41 @@ namespace Matrix_DZ
             Console.WriteLine("Результат умножения");
             Matrix result = MatrixMultiplication(matrix_2x2, matrix_2x3);
             result.Print();
-            
 
-
-
-
+            Console.WriteLine();
+            Console.WriteLine("              🚗 FORD FOCUS 3 🚗");
+            Console.WriteLine();
+            Console.WriteLine("               ___________________");
+            Console.WriteLine("              /                   \\");
+            Console.WriteLine("             /                     \\");
+            Console.WriteLine("            /                       \\");
+            Console.WriteLine("           /                         \\");
+            Console.WriteLine("          /                           \\");
+            Console.WriteLine("         /                             \\");
+            Console.WriteLine("        /                               \\");
+            Console.WriteLine("       /                                 \\");
+            Console.WriteLine("      /                                   \\");
+            Console.WriteLine("     /                                     \\");
+            Console.WriteLine("    /                                       \\");
+            Console.WriteLine("   /_________________________________________\\");
+            Console.WriteLine("  | |                                       | |");
+            Console.WriteLine("  | |    ┌─────────────────────────────────┐ | |");
+            Console.WriteLine("  | |    │                                 │ | |");
+            Console.WriteLine("  | |    │   ███████████████████████████   │ | |");
+            Console.WriteLine("  | |    │   ███ ●         ●         ● ███ │ | |");
+            Console.WriteLine("  | |    │   ███                       ███ │ | |");
+            Console.WriteLine("  | |    │   ███   ┌───────────────┐   ███ │ | |");
+            Console.WriteLine("  | |    │   ███   │    F O R D    │   ███ │ | |");
+            Console.WriteLine("  | |    │   ███   └───────────────┘   ███ │ | |");
+            Console.WriteLine("  | |    │   ███                       ███ │ | |");
+            Console.WriteLine("  | |    │   ███████████████████████████   │ | |");
+            Console.WriteLine("  | |    │                                 │ | |");
+            Console.WriteLine("  | |    └─────────────────────────────────┘ | |");
+            Console.WriteLine("  | |                                       | |");
+            Console.WriteLine("  | |_______________________________________| |");
+            Console.WriteLine("  |___________________________________________|");
+            Console.WriteLine();
+            Console.WriteLine("         💨 Ready for matrix math! 💨");
 
         }
         /// Функция умножения матриц
