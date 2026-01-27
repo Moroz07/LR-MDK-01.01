@@ -27,7 +27,8 @@ namespace NasledWinForms
             allpeoples_.Add(new HomoSapiens("Никита Андрианов", 18));
             allpeoples_.Add(new HomoSapiens("Влад Смирнов", 18));
             allpeoples_.Add(new HomoSapiens("Кирюха", 22));
-            allpeoples_.Add(new Student(256));
+            allpeoples_.Add(new Student(256));  
+
 
 
             foreach (HomoSapiens people in allpeoples_)
