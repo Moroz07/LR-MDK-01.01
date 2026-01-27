@@ -85,70 +85,78 @@
             this.panel1.Controls.Add(this.AvgBallLabel);
             this.panel1.Controls.Add(this.AgeLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel1.Location = new System.Drawing.Point(152, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(788, 560);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(270, 530);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 20);
+            this.label3.Size = new System.Drawing.Size(142, 24);
             this.label3.TabIndex = 6;
             this.label3.Text = "Номер билета:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(270, 496);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 20);
+            this.label2.Size = new System.Drawing.Size(141, 24);
             this.label2.TabIndex = 5;
             this.label2.Text = "Средний балл:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(296, 462);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 20);
+            this.label1.Size = new System.Drawing.Size(89, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Возраст:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // NumberTicketLabel
             // 
             this.NumberTicketLabel.AutoSize = true;
-            this.NumberTicketLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NumberTicketLabel.Location = new System.Drawing.Point(398, 530);
+            this.NumberTicketLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NumberTicketLabel.Location = new System.Drawing.Point(446, 530);
             this.NumberTicketLabel.Name = "NumberTicketLabel";
-            this.NumberTicketLabel.Size = new System.Drawing.Size(51, 20);
+            this.NumberTicketLabel.Size = new System.Drawing.Size(60, 24);
             this.NumberTicketLabel.TabIndex = 3;
             this.NumberTicketLabel.Text = "label3";
+            this.NumberTicketLabel.Click += new System.EventHandler(this.NumberTicketLabel_Click);
             // 
             // AvgBallLabel
             // 
             this.AvgBallLabel.AutoSize = true;
-            this.AvgBallLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AvgBallLabel.Location = new System.Drawing.Point(398, 496);
+            this.AvgBallLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AvgBallLabel.Location = new System.Drawing.Point(446, 496);
             this.AvgBallLabel.Name = "AvgBallLabel";
-            this.AvgBallLabel.Size = new System.Drawing.Size(51, 20);
+            this.AvgBallLabel.Size = new System.Drawing.Size(60, 24);
             this.AvgBallLabel.TabIndex = 2;
             this.AvgBallLabel.Text = "label2";
+            this.AvgBallLabel.Click += new System.EventHandler(this.AvgBallLabel_Click);
             // 
             // AgeLabel
             // 
             this.AgeLabel.AutoSize = true;
-            this.AgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AgeLabel.Location = new System.Drawing.Point(398, 462);
+            this.AgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AgeLabel.Location = new System.Drawing.Point(446, 462);
             this.AgeLabel.Name = "AgeLabel";
-            this.AgeLabel.Size = new System.Drawing.Size(51, 20);
+            this.AgeLabel.Size = new System.Drawing.Size(60, 24);
             this.AgeLabel.TabIndex = 1;
             this.AgeLabel.Text = "label1";
+            this.AgeLabel.Click += new System.EventHandler(this.AgeLabel_Click);
             // 
             // ImageBox
             // 

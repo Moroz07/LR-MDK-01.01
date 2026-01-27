@@ -31,6 +31,39 @@ namespace ConstWinForm
             
         }
 
-       
+        private void AgeLabel_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AvgBallLabel_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void NumberTicketLabel_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
