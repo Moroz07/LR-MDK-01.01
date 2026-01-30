@@ -15,13 +15,14 @@ namespace MovieShow
         private DateTime enddate_;
         private string photo_;
 
-        public Movie(string name,  int price, string director, string mainActor, DateTime enddate )
+        public Movie(string name,  int price, string director, string mainActor, DateTime enddate, string photo )
         {
             name_ = name;
             price_ = price;
             director_ = director;
             mainActor_ = mainActor;
             enddate_ = enddate;
+            photo_ = photo;
             
         }
 

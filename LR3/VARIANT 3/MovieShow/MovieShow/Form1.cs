@@ -13,14 +13,15 @@ namespace MovieShow
     public partial class MainForm : Form
     {
         List<Movie> actionmovie = new List<Movie>();
-        List<Movie> fantasy = new List<Movie>(); 
+        List<Movie> fantasy = new List<Movie>();
+        int totalShows = 0;
         public MainForm()
         {
             InitializeComponent();
-            actionmovie.Add(new Movie ("Трансформеры", 250, "Майкл Бэй", "Шайа Лабаф", new DateTime(2025, 01, 30)));
-            actionmovie.Add(new Movie("Брат 2", 300, "Алексей Балабанов", "Сергей Бодров", new DateTime(2025, 01, 31)));
-            fantasy.Add(new Movie("Человек-паук: Через вселенные",  270, "Родни Ротман", "Шамеик Мур", new DateTime(2025, 02, 01)));
-            fantasy.Add(new Movie("Последний богатырь",  220, "Дмитрий Дьяченко", "Виктор Хориняк", new DateTime(2025, 02, 01)));
+            actionmovie.Add(new Movie ("Трансформеры", 250, "Майкл Бэй", "Шайа Лабаф", new DateTime(2025, 01, 30), @"A:\\Работы C#\\Морозов\\LR3\\Фотки\\Трансформеры.jpg"));
+            actionmovie.Add(new Movie("Брат 2", 300, "Алексей Балабанов", "Сергей Бодров", new DateTime(2025, 01, 31), @"A:\\Работы C#\\Морозов\\LR3\\Фотки\\Брат2.jpg"));
+            fantasy.Add(new Movie("Человек-паук: Через вселенные",  270, "Родни Ротман", "Шамеик Мур", new DateTime(2025, 02, 01), @"A:\\Работы C#\\Морозов\\LR3\\Фотки\\ЧеловекПаук.jpg"));
+            fantasy.Add(new Movie("Последний богатырь",  220, "Дмитрий Дьяченко", "Виктор Хориняк", new DateTime(2025, 02, 01), @"A:\\Работы C#\\Морозов\\LR3\\Фотки\\ПоследнийБогатырь.jpg"));
 
             ListBoxGenre.Items.Add("Боевик");
             ListBoxGenre.Items.Add("Фэнтези");
@@ -95,7 +96,28 @@ namespace MovieShow
 
                     RichTextBoxInfo.Text = selectedMovie.GetInfo();
                 }
+
+                totalShows = (int)totalShowsMovie.Value;
+                RichTextBoxInfo.Text += $"\nЗаказано показов: {totalShows}";
+                
             }
         }
+
+        private void ComboBoxMovie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string movieName = ComboBoxMovie.Text;
+            
+
+            foreach (Movie m in actionmovie)
+                if (m.Name == movieName)
+                    PictureBoxMovie.Load(m.Photo);
+
+            foreach (Movie m in fantasy)
+                if (m.Name == movieName)
+                    PictureBoxMovie.Load(m.Photo);
+            
+        }
+
+        
     }
 }
