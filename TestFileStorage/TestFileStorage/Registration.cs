@@ -25,10 +25,24 @@ namespace TestFileStorage
             string login = LoginTextBox.Text;
             string password = PasswordTextBox.Text;
             User user = new User(login, password);
+            if (password == null)
+            {
+                MessageBox.Show("Вы не ввели пароль");
+                return;
+            }
 
-            registration.UserVerification(login);
-            registration.UserRegistration(user);
-
+            if (registration.UserVerification(login))
+            {
+                MessageBox.Show("Такой пользователь уже существует");
+            }
+            else
+            {
+                if (registration.UserRegistration(user))
+                {
+                    MessageBox.Show("Вы успешно зарегистрировались");
+                }
+            }
         }
+        
     }
 }
