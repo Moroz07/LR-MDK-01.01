@@ -60,5 +60,10 @@ namespace TestFileStorage
             return false;
         }
 
+        private void RegistrationButton_Click(object sender, EventArgs e)
+        {
+            Registration newForm = new Registration();
+            newForm.Show();
+        }
     }
 }

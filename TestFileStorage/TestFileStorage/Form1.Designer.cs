@@ -33,6 +33,7 @@
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.EnterButton = new System.Windows.Forms.Button();
             this.LoginComboBox = new System.Windows.Forms.ComboBox();
+            this.RegistrationButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PasswordTextBox
@@ -86,11 +87,22 @@
             this.LoginComboBox.Size = new System.Drawing.Size(148, 21);
             this.LoginComboBox.TabIndex = 5;
             // 
+            // RegistrationButton
+            // 
+            this.RegistrationButton.Location = new System.Drawing.Point(162, 323);
+            this.RegistrationButton.Name = "RegistrationButton";
+            this.RegistrationButton.Size = new System.Drawing.Size(122, 21);
+            this.RegistrationButton.TabIndex = 6;
+            this.RegistrationButton.Text = "зарегистрироваться";
+            this.RegistrationButton.UseVisualStyleBackColor = true;
+            this.RegistrationButton.Click += new System.EventHandler(this.RegistrationButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(510, 400);
+            this.Controls.Add(this.RegistrationButton);
             this.Controls.Add(this.LoginComboBox);
             this.Controls.Add(this.EnterButton);
             this.Controls.Add(this.PasswordLabel);
@@ -109,6 +121,7 @@
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Button EnterButton;
         private System.Windows.Forms.ComboBox LoginComboBox;
+        private System.Windows.Forms.Button RegistrationButton;
     }
 }
 

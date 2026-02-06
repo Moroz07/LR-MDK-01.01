@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TestFileStorage
 {
@@ -24,6 +25,33 @@ namespace TestFileStorage
             }
             return AllUser;
             
+        }
+
+       public bool UserVerification(string login)
+       {
+            List<User> Users = Load();
+            foreach(User us in Users)
+            {
+                if (us.Login != login)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return true;
+       }
+
+        public bool UserRegistration(User us)
+        {
+            using (StreamWriter UserNew = new StreamWriter("info.txt", true))
+            {
+                UserNew.WriteLine(us.Login + "-" + us.Password);
+            }
+            MessageBox.Show("Логин и пароль добавлены!");
+            return true;
         }
     }
 }
