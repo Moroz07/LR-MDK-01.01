@@ -28,21 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LoginTextBox = new System.Windows.Forms.TextBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.LoginLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.EnterButton = new System.Windows.Forms.Button();
+            this.LoginComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // LoginTextBox
-            // 
-            this.LoginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LoginTextBox.Location = new System.Drawing.Point(212, 101);
-            this.LoginTextBox.Multiline = true;
-            this.LoginTextBox.Name = "LoginTextBox";
-            this.LoginTextBox.Size = new System.Drawing.Size(148, 26);
-            this.LoginTextBox.TabIndex = 0;
             // 
             // PasswordTextBox
             // 
@@ -87,16 +78,24 @@
             this.EnterButton.UseVisualStyleBackColor = false;
             this.EnterButton.Click += new System.EventHandler(this.EnterButton_Click);
             // 
+            // LoginComboBox
+            // 
+            this.LoginComboBox.FormattingEnabled = true;
+            this.LoginComboBox.Location = new System.Drawing.Point(212, 101);
+            this.LoginComboBox.Name = "LoginComboBox";
+            this.LoginComboBox.Size = new System.Drawing.Size(148, 21);
+            this.LoginComboBox.TabIndex = 5;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(510, 400);
+            this.Controls.Add(this.LoginComboBox);
             this.Controls.Add(this.EnterButton);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.LoginLabel);
             this.Controls.Add(this.PasswordTextBox);
-            this.Controls.Add(this.LoginTextBox);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -105,12 +104,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox LoginTextBox;
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Label LoginLabel;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Button EnterButton;
+        private System.Windows.Forms.ComboBox LoginComboBox;
     }
 }
 

@@ -14,15 +14,24 @@ namespace TestFileStorage
     public partial class MainForm : Form
     {
         private FileUserStorage authorization = new FileUserStorage();
+        private List<string> logins = new List<string>();
         public MainForm()
         {
             InitializeComponent();
+            List<User> allUsers = new List<User>();
+            allUsers = authorization.Load();
+
+            foreach (User u in allUsers)
+            {
+                logins.Add(u.Login);
+            }
+            LoginComboBox.DataSource = logins;
         }
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
             List<User> iden = authorization.Load();
-            string login = LoginTextBox.Text;
+            string login = LoginComboBox.Text;
             string password = PasswordTextBox.Text;
             User user = new User(login, password);
 
@@ -36,25 +45,7 @@ namespace TestFileStorage
             }
 
 
-            //foreach (User u in iden)
-            //{
-            //    if (user.Login == u.Login)
-            //    {
-            //        if (user.Password == u.Password)
-            //        {
-            //            MessageBox.Show("Вы вошли в систему!");
-            //            break;
-            //        }
-
-
-                //    }
-                //    else
-                //    {
-                //        MessageBox.Show("Проверьте логин");
-
-                //    }
-                //}
-
+            
 
         }
         private bool Contains(List<User> users, User user)
