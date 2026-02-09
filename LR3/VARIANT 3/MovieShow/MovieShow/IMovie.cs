@@ -8,6 +8,6 @@ namespace MovieShow
 {
     internal interface IMovie
     {
-        List<Movie> Movie();
+        List<Movie> LoadAllMovie();
     }
 }

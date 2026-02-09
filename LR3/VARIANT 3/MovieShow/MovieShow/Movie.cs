@@ -14,8 +14,9 @@ namespace MovieShow
         private string mainActor_;
         private DateTime enddate_;
         private string photo_;
+        private string genre_;
 
-        public Movie(string name,  int price, string director, string mainActor, DateTime enddate, string photo )
+        public Movie(string name,  int price, string director, string mainActor, DateTime enddate, string photo, string genre)
         {
             name_ = name;
             price_ = price;
@@ -23,6 +24,7 @@ namespace MovieShow
             mainActor_ = mainActor;
             enddate_ = enddate;
             photo_ = photo;
+            genre_ = genre;
             
         }
 
@@ -42,9 +44,12 @@ namespace MovieShow
         public string Photo
         { get { return photo_; } }
 
+        public string Genre 
+        { get { return genre_; } }
+
         public string GetInfo()
         {
-            return $"Название: {name_}\n Цена: {price_}\n Режиссер: {director_}\n Главные роли: {mainActor_} \n Срок завершения проката: {enddate_} ";
+            return $"Название: {name_}\nЖанр: {genre_}\nЦена: {price_}\nРежиссер: {director_}\nГлавные роли: {mainActor_}\nСрок завершения проката: {enddate_.ToShortDateString()}";
         }
     }
 }

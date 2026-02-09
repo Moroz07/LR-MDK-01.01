@@ -42,33 +42,32 @@
             // 
             // ListBoxGenre
             // 
-            this.ListBoxGenre.Dock = System.Windows.Forms.DockStyle.Left;
             this.ListBoxGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ListBoxGenre.FormattingEnabled = true;
             this.ListBoxGenre.ItemHeight = 20;
-            this.ListBoxGenre.Location = new System.Drawing.Point(0, 0);
+            this.ListBoxGenre.Location = new System.Drawing.Point(-2, 13);
             this.ListBoxGenre.Margin = new System.Windows.Forms.Padding(4);
             this.ListBoxGenre.Name = "ListBoxGenre";
-            this.ListBoxGenre.Size = new System.Drawing.Size(159, 603);
+            this.ListBoxGenre.Size = new System.Drawing.Size(166, 544);
             this.ListBoxGenre.TabIndex = 0;
             this.ListBoxGenre.SelectedIndexChanged += new System.EventHandler(this.ListBoxGenre_SelectedIndexChanged);
             // 
             // ComboBoxMovie
             // 
             this.ComboBoxMovie.FormattingEnabled = true;
-            this.ComboBoxMovie.Location = new System.Drawing.Point(209, 46);
+            this.ComboBoxMovie.Location = new System.Drawing.Point(453, 82);
             this.ComboBoxMovie.Margin = new System.Windows.Forms.Padding(4);
             this.ComboBoxMovie.Name = "ComboBoxMovie";
-            this.ComboBoxMovie.Size = new System.Drawing.Size(291, 24);
+            this.ComboBoxMovie.Size = new System.Drawing.Size(149, 24);
             this.ComboBoxMovie.TabIndex = 1;
             this.ComboBoxMovie.SelectedIndexChanged += new System.EventHandler(this.ComboBoxMovie_SelectedIndexChanged);
             // 
             // PictureBoxMovie
             // 
-            this.PictureBoxMovie.Location = new System.Drawing.Point(590, 0);
+            this.PictureBoxMovie.Location = new System.Drawing.Point(610, 0);
             this.PictureBoxMovie.Margin = new System.Windows.Forms.Padding(4);
             this.PictureBoxMovie.Name = "PictureBoxMovie";
-            this.PictureBoxMovie.Size = new System.Drawing.Size(644, 403);
+            this.PictureBoxMovie.Size = new System.Drawing.Size(609, 403);
             this.PictureBoxMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBoxMovie.TabIndex = 2;
             this.PictureBoxMovie.TabStop = false;
@@ -76,7 +75,7 @@
             // ButtonShowMovie
             // 
             this.ButtonShowMovie.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ButtonShowMovie.Location = new System.Drawing.Point(225, 450);
+            this.ButtonShowMovie.Location = new System.Drawing.Point(246, 248);
             this.ButtonShowMovie.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonShowMovie.Name = "ButtonShowMovie";
             this.ButtonShowMovie.Size = new System.Drawing.Size(204, 79);
@@ -88,25 +87,25 @@
             // RichTextBoxInfo
             // 
             this.RichTextBoxInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RichTextBoxInfo.Location = new System.Drawing.Point(693, 411);
+            this.RichTextBoxInfo.Location = new System.Drawing.Point(610, 437);
             this.RichTextBoxInfo.Margin = new System.Windows.Forms.Padding(4);
             this.RichTextBoxInfo.Name = "RichTextBoxInfo";
-            this.RichTextBoxInfo.Size = new System.Drawing.Size(409, 192);
+            this.RichTextBoxInfo.Size = new System.Drawing.Size(609, 153);
             this.RichTextBoxInfo.TabIndex = 4;
             this.RichTextBoxInfo.Text = "";
             // 
             // totalShowsMovie
             // 
-            this.totalShowsMovie.Location = new System.Drawing.Point(246, 190);
+            this.totalShowsMovie.Location = new System.Drawing.Point(453, 162);
             this.totalShowsMovie.Name = "totalShowsMovie";
-            this.totalShowsMovie.Size = new System.Drawing.Size(183, 22);
+            this.totalShowsMovie.Size = new System.Drawing.Size(150, 22);
             this.totalShowsMovie.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(241, 9);
+            this.label1.Location = new System.Drawing.Point(241, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 25);
             this.label1.TabIndex = 6;
@@ -116,11 +115,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(220, 149);
+            this.label2.Location = new System.Drawing.Point(167, 162);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(298, 25);
+            this.label2.Size = new System.Drawing.Size(261, 25);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Выберите количество показов";
+            this.label2.Text = "Выбериете кол-во показов";
             // 
             // MainForm
             // 
