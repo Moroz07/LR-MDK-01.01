@@ -43,12 +43,12 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Models\IUserModels.cs" />
+    <Compile Include="Models\MemoryUsersModel.cs" />
     <Compile Include="ModelViews\User.cs" />
+    <Compile Include="Presenter\UserPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\IUsersView.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presenter\" />
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

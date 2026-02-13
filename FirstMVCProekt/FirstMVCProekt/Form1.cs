@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ModelViewLib.Presenter;
+using ModelViewLib.Models;
+
+
 
 namespace FirstMVCProekt
 {
@@ -15,6 +19,11 @@ namespace FirstMVCProekt
         public Form1()
         {
             InitializeComponent();
+            UsersTableView usersTable = new UsersTableView();
+            Controls.Add(usersTable);
+            usersTable.Dock = DockStyle.Top;
+
+            UserPresenter userPresenter = new UserPresenter(new MemoryUsersModel(), usersTable);
         }
     }
 }
