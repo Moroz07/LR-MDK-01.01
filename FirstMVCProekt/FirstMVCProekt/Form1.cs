@@ -16,14 +16,20 @@ namespace FirstMVCProekt
 {
     public partial class Form1: Form
     {
+        UsersTableView usersTable_ = new UsersTableView();
         public Form1()
         {
             InitializeComponent();
-            UsersTableView usersTable = new UsersTableView();
-            Controls.Add(usersTable);
-            usersTable.Dock = DockStyle.Top;
+            
+            Controls.Add(usersTable_);
+            usersTable_.Dock = DockStyle.Top;
 
-            UserPresenter userPresenter = new UserPresenter(new MemoryUsersModel(), usersTable);
+            UserPresenter userPresenter = new UserPresenter(new MemoryUsersModel(), usersTable_);
+        }
+
+        private void RemoveToolStripButton_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
