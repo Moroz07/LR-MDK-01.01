@@ -29,20 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.RemoveToolStrip = new System.Windows.Forms.ToolStrip();
+            this.MenuToolStrip = new System.Windows.Forms.ToolStrip();
             this.RemoveToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.RemoveToolStrip.SuspendLayout();
+            this.usersTableView1 = new FirstMVCProekt.UsersTableView();
+            this.MenuToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersTableView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // RemoveToolStrip
+            // MenuToolStrip
             // 
-            this.RemoveToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RemoveToolStripButton});
-            this.RemoveToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.RemoveToolStrip.Name = "RemoveToolStrip";
-            this.RemoveToolStrip.Size = new System.Drawing.Size(800, 67);
-            this.RemoveToolStrip.TabIndex = 0;
-            this.RemoveToolStrip.Text = "toolStrip1";
+            this.MenuToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.MenuToolStrip.Name = "MenuToolStrip";
+            this.MenuToolStrip.Size = new System.Drawing.Size(800, 67);
+            this.MenuToolStrip.TabIndex = 0;
+            this.MenuToolStrip.Text = "toolStrip1";
             // 
             // RemoveToolStripButton
             // 
@@ -55,16 +57,27 @@
             this.RemoveToolStripButton.Text = "toolStripButton1";
             this.RemoveToolStripButton.Click += new System.EventHandler(this.RemoveToolStripButton_Click);
             // 
+            // usersTableView1
+            // 
+            this.usersTableView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usersTableView1.Location = new System.Drawing.Point(0, 60);
+            this.usersTableView1.Name = "usersTableView1";
+            this.usersTableView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.usersTableView1.Size = new System.Drawing.Size(800, 150);
+            this.usersTableView1.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.RemoveToolStrip);
+            this.Controls.Add(this.usersTableView1);
+            this.Controls.Add(this.MenuToolStrip);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.RemoveToolStrip.ResumeLayout(false);
-            this.RemoveToolStrip.PerformLayout();
+            this.MenuToolStrip.ResumeLayout(false);
+            this.MenuToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersTableView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,8 +85,9 @@
 
         #endregion
 
-        private System.Windows.Forms.ToolStrip RemoveToolStrip;
+        private System.Windows.Forms.ToolStrip MenuToolStrip;
         private System.Windows.Forms.ToolStripButton RemoveToolStripButton;
+        private UsersTableView usersTableView1;
     }
 }
 

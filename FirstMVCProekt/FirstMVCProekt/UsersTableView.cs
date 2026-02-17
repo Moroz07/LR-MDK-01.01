@@ -16,15 +16,16 @@ namespace FirstMVCProekt
         public List<User> GetSelectedUser()
         {
             List<User> result = new List<User>();
-            foreach(var row in SelectedRows)
+            foreach(DataGridViewRow row in SelectedRows)
             {
-                result.Add(row as User);
+                result.Add(row.DataBoundItem as User);
             }
             return result;
         }
         public void ShowUsers(List<User> allUsers)
         {
-          DataSource = allUsers;
+            DataSource = null;
+            DataSource = allUsers;
         }
     }
 }

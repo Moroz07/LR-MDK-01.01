@@ -38,6 +38,18 @@ namespace ModelViewLib.Models
                 
         }
 
-        
+        public void RemoveUsers(List<User> users)
+        {
+            foreach (User u in users)
+            {
+                int targetIndex = allusers_.FindIndex(local => local.Login == u.Login);
+                if (targetIndex >= 0)
+                {
+                    allusers_.RemoveAt(targetIndex);
+                }
+            }
+        }
+
+
     }
 }
