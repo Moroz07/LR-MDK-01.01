@@ -1,7 +1,10 @@
 ﻿using ModelViewLib.ModelViews;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -50,6 +53,22 @@ namespace ModelViewLib.Models
             }
         }
 
+        public bool Adduser (User user)
+        {
+            
+            if (allusers_.Contains(user))
+            {
+              return false;
+            }
+            else
+            {
+                allusers_.Add(user);
+                return true;
+            }
+        }
+        
+        
 
-    }
+
+     }
 }

@@ -38,5 +38,11 @@ namespace FirstMVCProekt
                 presenter_.RemoveUsers(selectedUsers);
             }
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            AddUserForm add = new AddUserForm();
+            add.ShowDialog();
+        }
     }
 }
