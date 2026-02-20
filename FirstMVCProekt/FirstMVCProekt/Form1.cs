@@ -41,8 +41,14 @@ namespace FirstMVCProekt
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            AddUserForm add = new AddUserForm();
+            AddUserForm add = new AddUserForm(presenter_.GetModel());
             add.ShowDialog();
+            
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            usersTableView1.ShowUsers(presenter_.GetModel().Load());
         }
     }
 }

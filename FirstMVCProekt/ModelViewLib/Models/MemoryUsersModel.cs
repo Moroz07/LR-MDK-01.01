@@ -55,16 +55,15 @@ namespace ModelViewLib.Models
 
         public bool Adduser (User user)
         {
-            
-            if (allusers_.Contains(user))
+            foreach (User u in allusers_)
             {
-              return false;
+                if (u.Login == user.Login)
+                {
+                    return false; 
+                }
             }
-            else
-            {
-                allusers_.Add(user);
-                return true;
-            }
+            allusers_.Add(user);
+            return true;
         }
         
         

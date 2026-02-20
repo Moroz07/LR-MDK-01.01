@@ -36,5 +36,10 @@ namespace ModelViewLib.Presenter
             model_.Adduser(user);
             views_.ShowUsers(model_.Load());
         }
+
+        public IUserModels GetModel()
+        {
+            return model_;  
+        }
     }
 }
