@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.MenuToolStrip = new System.Windows.Forms.ToolStrip();
             this.RemoveToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.RegisterToolButton = new System.Windows.Forms.ToolStripButton();
             this.usersTableView1 = new FirstMVCProekt.UsersTableView();
             this.MenuToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersTableView1)).BeginInit();
@@ -42,11 +42,11 @@
             this.MenuToolStrip.AutoSize = false;
             this.MenuToolStrip.ImageScalingSize = new System.Drawing.Size(64, 64);
             this.MenuToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.RemoveToolStripButton,
-            this.toolStripButton1});
+            this.RegisterToolButton,
+            this.RemoveToolStripButton});
             this.MenuToolStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuToolStrip.Name = "MenuToolStrip";
-            this.MenuToolStrip.Size = new System.Drawing.Size(1067, 82);
+            this.MenuToolStrip.Size = new System.Drawing.Size(486, 67);
             this.MenuToolStrip.TabIndex = 0;
             this.MenuToolStrip.Text = "toolStrip1";
             // 
@@ -57,43 +57,40 @@
             this.RemoveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoveToolStripButton.Image")));
             this.RemoveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RemoveToolStripButton.Name = "RemoveToolStripButton";
-            this.RemoveToolStripButton.Size = new System.Drawing.Size(64, 64);
+            this.RemoveToolStripButton.Size = new System.Drawing.Size(48, 48);
             this.RemoveToolStripButton.Text = "toolStripButton1";
             this.RemoveToolStripButton.Click += new System.EventHandler(this.RemoveToolStripButton_Click);
             // 
-            // toolStripButton1
+            // RegisterToolButton
             // 
-            this.toolStripButton1.AutoSize = false;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::FirstMVCProekt.Properties.Resources.Add;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(64, 64);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.RegisterToolButton.AutoSize = false;
+            this.RegisterToolButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.RegisterToolButton.Image = global::FirstMVCProekt.Properties.Resources.Add;
+            this.RegisterToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.RegisterToolButton.Name = "RegisterToolButton";
+            this.RegisterToolButton.Size = new System.Drawing.Size(48, 48);
+            this.RegisterToolButton.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // usersTableView1
             // 
             this.usersTableView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.usersTableView1.Location = new System.Drawing.Point(0, 74);
-            this.usersTableView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usersTableView1.Location = new System.Drawing.Point(0, 57);
             this.usersTableView1.Name = "usersTableView1";
             this.usersTableView1.RowHeadersWidth = 51;
             this.usersTableView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.usersTableView1.Size = new System.Drawing.Size(1067, 185);
+            this.usersTableView1.Size = new System.Drawing.Size(484, 150);
             this.usersTableView1.TabIndex = 1;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(486, 252);
             this.Controls.Add(this.usersTableView1);
             this.Controls.Add(this.MenuToolStrip);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.Activated += new System.EventHandler(this.Form1_Activated);
+            this.Text = "Пользователи";
             this.MenuToolStrip.ResumeLayout(false);
             this.MenuToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersTableView1)).EndInit();
@@ -106,7 +103,7 @@
         private System.Windows.Forms.ToolStrip MenuToolStrip;
         private System.Windows.Forms.ToolStripButton RemoveToolStripButton;
         private UsersTableView usersTableView1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton RegisterToolButton;
     }
 }
 

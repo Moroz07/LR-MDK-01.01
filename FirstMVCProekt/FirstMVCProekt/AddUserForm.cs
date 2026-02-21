@@ -17,45 +17,42 @@ namespace FirstMVCProekt
     public partial class AddUserForm: Form
     {
         
-        private IUserModels usersModel_;
+        
 
         private User user_;
-        private User user
+        public User user
         {
             get { return user_; }
             set { user_ = value; }
         }
         
-        public AddUserForm(IUserModels model)
+        public AddUserForm()
         {
             InitializeComponent();
-            usersModel_ = model;
-
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            
-            List<User> Allusers = new List<User>();
-            user = new User(LoginTextBox.Text,  PasswordTextBox.Text, NameTextBox.Text);
-            bool result = usersModel_.Adduser(user);
-            if (result)
+            if (LoginTextBox.Text.Trim() != "" && PasswordTextBox.Text.Trim() != "" && NameTextBox.Text.Trim() != "")
             {
-                MessageBox.Show("Пользователь успешно добавлен!", "Успех",
-                    MessageBoxButtons.OK);
-                this.Close();
+                user_ = new User(LoginTextBox.Text, PasswordTextBox.Text, NameTextBox.Text);
+                DialogResult = DialogResult.Yes;
+                Close();
             }
             else
             {
-                MessageBox.Show("Такой пользователь уже существует!", "Ошибка",
-                    MessageBoxButtons.OK);
-                this.Close();
+                MessageBox.Show("Вы не заполнили все поля!", "Ошибка");
                 
             }
 
+        }
 
+       
 
-
+        private void CloseButton_Click_1(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.No;
+            Close();
         }
     }
 }
