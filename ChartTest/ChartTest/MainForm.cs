@@ -69,6 +69,7 @@ namespace ChartTest
 
             angular.TicksForeground = Brushes.Purple;
             angular.NeedleFill = Brushes.Green;
+
             
         }
 
