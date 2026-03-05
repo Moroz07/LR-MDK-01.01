@@ -12,7 +12,7 @@ namespace MovieShow
         public List<Movie> LoadAllMovie()
         {
             List<Movie> allMovie = new List<Movie>();
-            string path = @"A:\Работы C#\Морозов\LR3\Фильмы\data.csv";
+            string path = "data3.csv";
             StreamReader info = new StreamReader(path);
             string line;
             while ((line = info.ReadLine()) != null)

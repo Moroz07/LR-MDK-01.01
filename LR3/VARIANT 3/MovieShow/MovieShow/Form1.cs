@@ -26,6 +26,7 @@ namespace MovieShow
 
             IMovie movieLoader = new StorageMovie();
             allMovies = movieLoader.LoadAllMovie();
+            UpdatePriceInfo();
 
         }
 
@@ -75,10 +76,10 @@ namespace MovieShow
                 {
                     int shows = (int)totalShowsMovie.Value;
 
-
+                    int totalPrice = selectedMovie.Price * shows;
                     RichTextBoxInfo.Text = selectedMovie.GetInfo();
                     RichTextBoxInfo.Text += $"\nЗаказано показов: {shows}";
-
+                    RichTextBoxInfo.Text += $"\nИтоговая сумма: {totalPrice} руб.";
                 }
             }
         }
@@ -96,8 +97,39 @@ namespace MovieShow
                 }
             }
 
+            UpdatePriceInfo();
+
         }
 
-        
+       
+
+        private void UpdatePriceInfo()
+        {
+            
+            if (ComboBoxMovie.SelectedItem == null) return;
+
+            string movieName = ComboBoxMovie.SelectedItem.ToString();
+            Movie selectedMovie = null;
+
+            foreach (Movie movie in allMovies)
+            {
+                if (movie.Name == movieName)
+                {
+                    selectedMovie = movie;
+                    break;
+                }
+            }
+
+            if (selectedMovie != null)
+            {
+                int shows = (int)totalShowsMovie.Value;
+                int totalPrice = selectedMovie.Price * shows;
+                RichTextBoxInfo.Text =
+                    $"Фильм: {selectedMovie.Name}\n" +
+                    $"Цена показа: {selectedMovie.Price} руб/показ\n";
+            }
+        }
+
+
     }
 }
