@@ -32,6 +32,7 @@ namespace ChartTest
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cartesian = new ChartTest.Views.SalesCartesianChart();
             this.ItemsList = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.angular = new LiveCharts.WinForms.AngularGauge();
@@ -39,7 +40,6 @@ namespace ChartTest
             this.solid = new LiveCharts.WinForms.SolidGauge();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.piechart = new ChartTest.Views.SalesPieChart();
-            this.cartesian = new ChartTest.Views.SalesCartesianChart();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -72,6 +72,14 @@ namespace ChartTest
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "CartesianChart";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // cartesian
+            // 
+            this.cartesian.Location = new System.Drawing.Point(123, 3);
+            this.cartesian.Name = "cartesian";
+            this.cartesian.Size = new System.Drawing.Size(500, 418);
+            this.cartesian.TabIndex = 0;
+            this.cartesian.Text = "cartesian";
             // 
             // ItemsList
             // 
@@ -141,15 +149,6 @@ namespace ChartTest
             this.piechart.Size = new System.Drawing.Size(786, 418);
             this.piechart.TabIndex = 0;
             this.piechart.Text = "pieChart1";
-            // 
-            // cartesian
-            // 
-            this.cartesian.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartesian.Location = new System.Drawing.Point(123, 3);
-            this.cartesian.Name = "cartesian";
-            this.cartesian.Size = new System.Drawing.Size(666, 418);
-            this.cartesian.TabIndex = 0;
-            this.cartesian.Text = "cartesian";
             // 
             // MainForm
             // 
