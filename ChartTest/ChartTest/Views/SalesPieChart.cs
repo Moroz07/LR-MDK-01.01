@@ -1,22 +1,16 @@
-﻿using LiveCharts.Wpf;
-using LiveCharts;
+﻿using LiveCharts;
+using LiveCharts.Wpf;
 using SalesLibrary;
+using SalesLibrary.Analysis;
 using SalesLibrary.Models;
+using SalesLibrary.Presenters;
 using SalesLibrary.Views;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using SalesLibrary.Analysis;
-using SalesLibrary.Presenters;
 
 namespace ChartTest.Views
 {
-    class SalesPieChart : LiveCharts.WinForms.PieChart
-                                    
+    public class SalesPieChart : LiveCharts.WinForms.PieChart
     {
         private SalesPresenter presenter_;
 
@@ -25,20 +19,21 @@ namespace ChartTest.Views
             presenter_ = presenter;
         }
         public void UpdateView()
-        {
-            List<Item> allItems = presenter_.GetAllItems();
-            SeriesCollection seriesData_ = new SeriesCollection();
-            foreach (Item item in allItems)
+        {            
+            List<Item> allItems = presenter_.GetAllItems();;
+            SeriesCollection seriesData = new SeriesCollection();
+            foreach (Item i in allItems)
             {
-                seriesData_.Add(new PieSeries
+                seriesData.Add(new PieSeries
                 {
-                    Title = item.Name,
-                    Values = new ChartValues<double> { presenter_.GetProfitPercentByItem(item)},
-                    
+                    Title = i.Name,
+                    Values = new ChartValues<double> { presenter_.GetProfitPercentByItem(i) },
+                    DataLabels = true,
+                    Fill = System.Windows.Media.Brushes.BlueViolet
                 });
             }
-            Series = seriesData_;
-            LegendLocation = LegendLocation.Right;
+            Series = seriesData;
+            LegendLocation = LegendLocation.Left;
         }
     }
 }

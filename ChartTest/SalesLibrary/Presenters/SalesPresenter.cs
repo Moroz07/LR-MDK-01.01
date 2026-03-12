@@ -34,12 +34,12 @@ namespace SalesLibrary.Presenters
         public List<Item> GetAllItems()
         {
             return model_.GetAllItems();
-        }
-
+        }       
         public double GetProfitPercentByItem(Item selectedItem)
         {
-            double result = ProfitAnalyzer.CalculateProfitPercentByItem(selectedItem.Name, model_);
-            return Math.Round(result, 2);
+            double result = ProfitAnalyzer.CalculateProfitPercentByItem(selectedItem.Name,
+                                                               model_);
+            return Math.Round(result, 2);            
         }
     }
 }

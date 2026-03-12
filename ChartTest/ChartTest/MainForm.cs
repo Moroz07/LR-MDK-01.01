@@ -39,14 +39,6 @@ namespace ChartTest
             solid.To = 100;
             solid.LabelFormatter = value => value + "%";
         }
-
-        void FillPieChart()
-        {
-            piechart.SetPresenter(presenter_);
-            piechart.UpdateView();
-            piechart.InnerRadius = 30;
-
-        }
         public MainForm()
         {
             InitializeComponent();
@@ -59,7 +51,8 @@ namespace ChartTest
 
             FillSolid();
 
-            FillPieChart();
+            pie.SetPresenter(presenter_);
+            pie.UpdateView();
         }
 
         private void ItemsList_SelectedIndexChanged(object sender, System.EventArgs e)
@@ -72,12 +65,10 @@ namespace ChartTest
 
             presenter_.ShowSalesByItem(selectedItem.Name);
             double percent = Math.Round(
-                presenter_.GetProfitPercentByItem(selectedItem), 2);
+            presenter_.GetProfitPercentByItem(selectedItem), 2);
 
             angular.Value = percent;
             solid.Value = percent;
-
-            
         }
     }
 }
