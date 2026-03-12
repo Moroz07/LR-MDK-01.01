@@ -38,8 +38,7 @@ namespace ChartTest.Views
 
                 Separator = new Separator
                 {
-                    Stroke = new SolidColorBrush(Color.FromArgb(40, 0, 0, 0)),
-                    StrokeThickness = 1
+                    IsEnabled = false,
                 },
 
                 MinValue = 0

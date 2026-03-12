@@ -29,11 +29,11 @@ namespace ChartTest.Views
                     Title = i.Name,
                     Values = new ChartValues<double> { presenter_.GetProfitPercentByItem(i) },
                     DataLabels = true,
-                    Fill = System.Windows.Media.Brushes.BlueViolet
+                    //Fill = System.Windows.Media.Brushes.BlueViolet
                 });
             }
             Series = seriesData;
-            LegendLocation = LegendLocation.Left;
+            //LegendLocation = LegendLocation.Left;
         }
     }
 }

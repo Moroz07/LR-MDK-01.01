@@ -1,4 +1,6 @@
 ﻿using LiveCharts;
+using LiveCharts.Defaults;
+using LiveCharts.WinForms;
 using LiveCharts.Wpf;
 using SalesLibrary;
 using SalesLibrary.Analysis;
@@ -6,6 +8,7 @@ using SalesLibrary.Presenters;
 using SalesLibrary.Views;
 using System;
 using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Media;
 
@@ -23,22 +26,6 @@ namespace ChartTest
                 presenter_.ShowSalesByItem(((Item)ItemsList.Items[0]).Name);
             }
         }
-
-        void FillAngular()
-        {
-            angular.FromValue = 0;
-            angular.ToValue = 100;
-
-            angular.TicksForeground = Brushes.Gray;
-            angular.NeedleFill = Brushes.DarkBlue;
-        }
-
-        void FillSolid()
-        {
-            solid.From = 0;
-            solid.To = 100;
-            solid.LabelFormatter = value => value + "%";
-        }
         public MainForm()
         {
             InitializeComponent();
@@ -46,15 +33,26 @@ namespace ChartTest
             presenter_ = new SalesPresenter(new List<ISalesView> { cartesian });
 
             FillCartesianChart();
-
             FillAngular();
-
             FillSolid();
-
             pie.SetPresenter(presenter_);
             pie.UpdateView();
         }
+        void FillAngular()
+        {
+            angular.FromValue = 0;
+            angular.ToValue = 100;
+            angular.TickStep = 2;
+            angular.TicksForeground = System.Windows.Media.Brushes.Black;
 
+            angular.LabelsEffect = null;
+        }
+        void FillSolid()
+        {
+            solid.From = 0;
+            solid.To = 100;
+            solid.LabelFormatter = value => value + "%";
+        }
         private void ItemsList_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             Item selectedItem = ((Item)(ItemsList.SelectedItem));
@@ -66,7 +64,6 @@ namespace ChartTest
             presenter_.ShowSalesByItem(selectedItem.Name);
             double percent = Math.Round(
             presenter_.GetProfitPercentByItem(selectedItem), 2);
-
             angular.Value = percent;
             solid.Value = percent;
         }

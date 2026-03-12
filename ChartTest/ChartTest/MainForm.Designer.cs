@@ -31,25 +31,25 @@ namespace ChartTest
         private void InitializeComponent()
         {
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ItemsList = new System.Windows.Forms.ListBox();
-            this.RightPanel = new System.Windows.Forms.Panel();
-            this.RightUpPanel = new System.Windows.Forms.Panel();
-            this.pieChart1 = new LiveCharts.WinForms.PieChart();
-            this.RightBottomPanel = new System.Windows.Forms.Panel();
-            this.solidGauge1 = new LiveCharts.WinForms.SolidGauge();
-            this.RightCentralPanel = new System.Windows.Forms.Panel();
-            this.angularGauge1 = new LiveCharts.WinForms.AngularGauge();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cartesian = new ChartTest.Views.SalesCartesianChart();
+            this.RightPanel = new System.Windows.Forms.Panel();
+            this.RightCentralPanel = new System.Windows.Forms.Panel();
+            this.angular = new LiveCharts.WinForms.AngularGauge();
+            this.RightBottomPanel = new System.Windows.Forms.Panel();
+            this.solid = new LiveCharts.WinForms.SolidGauge();
+            this.RightUpPanel = new System.Windows.Forms.Panel();
+            this.pie = new ChartTest.Views.SalesPieChart();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ItemsList = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.RightPanel.SuspendLayout();
-            this.RightUpPanel.SuspendLayout();
-            this.RightBottomPanel.SuspendLayout();
-            this.RightCentralPanel.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.RightPanel.SuspendLayout();
+            this.RightCentralPanel.SuspendLayout();
+            this.RightBottomPanel.SuspendLayout();
+            this.RightUpPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,36 +58,31 @@ namespace ChartTest
             this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.RightPanel);
             this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1059, 525);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(792, 424);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "CartesianChart";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // panel3
             // 
-            this.panel1.Controls.Add(this.ItemsList);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(167, 517);
-            this.panel1.TabIndex = 2;
+            this.panel3.Controls.Add(this.cartesian);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(128, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(472, 418);
+            this.panel3.TabIndex = 4;
             // 
-            // ItemsList
+            // cartesian
             // 
-            this.ItemsList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ItemsList.FormattingEnabled = true;
-            this.ItemsList.ItemHeight = 16;
-            this.ItemsList.Location = new System.Drawing.Point(0, 0);
-            this.ItemsList.Margin = new System.Windows.Forms.Padding(4);
-            this.ItemsList.Name = "ItemsList";
-            this.ItemsList.Size = new System.Drawing.Size(167, 517);
-            this.ItemsList.TabIndex = 1;
-            this.ItemsList.SelectedIndexChanged += new System.EventHandler(this.ItemsList_SelectedIndexChanged);
+            this.cartesian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cartesian.Location = new System.Drawing.Point(0, 0);
+            this.cartesian.Name = "cartesian";
+            this.cartesian.Size = new System.Drawing.Size(472, 418);
+            this.cartesian.TabIndex = 0;
+            this.cartesian.Text = "cartesian";
             // 
             // RightPanel
             // 
@@ -95,119 +90,109 @@ namespace ChartTest
             this.RightPanel.Controls.Add(this.RightBottomPanel);
             this.RightPanel.Controls.Add(this.RightUpPanel);
             this.RightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.RightPanel.Location = new System.Drawing.Point(803, 4);
-            this.RightPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.RightPanel.Location = new System.Drawing.Point(600, 3);
             this.RightPanel.Name = "RightPanel";
-            this.RightPanel.Size = new System.Drawing.Size(252, 517);
+            this.RightPanel.Size = new System.Drawing.Size(189, 418);
             this.RightPanel.TabIndex = 3;
-            // 
-            // RightUpPanel
-            // 
-            this.RightUpPanel.Controls.Add(this.pieChart1);
-            this.RightUpPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.RightUpPanel.Location = new System.Drawing.Point(0, 0);
-            this.RightUpPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.RightUpPanel.Name = "RightUpPanel";
-            this.RightUpPanel.Size = new System.Drawing.Size(252, 126);
-            this.RightUpPanel.TabIndex = 0;
-            // 
-            // pieChart1
-            // 
-            this.pieChart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pieChart1.Location = new System.Drawing.Point(0, 0);
-            this.pieChart1.Margin = new System.Windows.Forms.Padding(4);
-            this.pieChart1.Name = "pieChart1";
-            this.pieChart1.Size = new System.Drawing.Size(252, 126);
-            this.pieChart1.TabIndex = 0;
-            this.pieChart1.Text = "pieChart1";
-            // 
-            // RightBottomPanel
-            // 
-            this.RightBottomPanel.Controls.Add(this.solidGauge1);
-            this.RightBottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.RightBottomPanel.Location = new System.Drawing.Point(0, 394);
-            this.RightBottomPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.RightBottomPanel.Name = "RightBottomPanel";
-            this.RightBottomPanel.Size = new System.Drawing.Size(252, 123);
-            this.RightBottomPanel.TabIndex = 1;
-            // 
-            // solidGauge1
-            // 
-            this.solidGauge1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.solidGauge1.Location = new System.Drawing.Point(0, 0);
-            this.solidGauge1.Margin = new System.Windows.Forms.Padding(4);
-            this.solidGauge1.Name = "solidGauge1";
-            this.solidGauge1.Size = new System.Drawing.Size(252, 123);
-            this.solidGauge1.TabIndex = 0;
-            this.solidGauge1.Text = "solidGauge1";
             // 
             // RightCentralPanel
             // 
-            this.RightCentralPanel.Controls.Add(this.angularGauge1);
+            this.RightCentralPanel.Controls.Add(this.angular);
             this.RightCentralPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RightCentralPanel.Location = new System.Drawing.Point(0, 126);
-            this.RightCentralPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.RightCentralPanel.Location = new System.Drawing.Point(0, 102);
             this.RightCentralPanel.Name = "RightCentralPanel";
-            this.RightCentralPanel.Size = new System.Drawing.Size(252, 268);
+            this.RightCentralPanel.Size = new System.Drawing.Size(189, 216);
             this.RightCentralPanel.TabIndex = 2;
             // 
-            // angularGauge1
+            // angular
             // 
-            this.angularGauge1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.angularGauge1.Location = new System.Drawing.Point(0, 0);
-            this.angularGauge1.Margin = new System.Windows.Forms.Padding(4);
-            this.angularGauge1.Name = "angularGauge1";
-            this.angularGauge1.Size = new System.Drawing.Size(252, 268);
-            this.angularGauge1.TabIndex = 0;
-            this.angularGauge1.Text = "angularGauge1";
+            this.angular.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.angular.Location = new System.Drawing.Point(0, 0);
+            this.angular.Name = "angular";
+            this.angular.Size = new System.Drawing.Size(189, 216);
+            this.angular.TabIndex = 0;
+            this.angular.Text = "angularGauge1";
             // 
-            // panel3
+            // RightBottomPanel
             // 
-            this.panel3.Controls.Add(this.cartesian);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(171, 4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(632, 517);
-            this.panel3.TabIndex = 4;
+            this.RightBottomPanel.Controls.Add(this.solid);
+            this.RightBottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.RightBottomPanel.Location = new System.Drawing.Point(0, 318);
+            this.RightBottomPanel.Name = "RightBottomPanel";
+            this.RightBottomPanel.Size = new System.Drawing.Size(189, 100);
+            this.RightBottomPanel.TabIndex = 1;
             // 
-            // cartesian
+            // solid
             // 
-            this.cartesian.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartesian.Location = new System.Drawing.Point(0, 0);
-            this.cartesian.Margin = new System.Windows.Forms.Padding(4);
-            this.cartesian.Name = "cartesian";
-            this.cartesian.Size = new System.Drawing.Size(632, 517);
-            this.cartesian.TabIndex = 0;
-            this.cartesian.Text = "cartesian";
+            this.solid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.solid.Location = new System.Drawing.Point(0, 0);
+            this.solid.Name = "solid";
+            this.solid.Size = new System.Drawing.Size(189, 100);
+            this.solid.TabIndex = 0;
+            this.solid.Text = "solidGauge1";
+            // 
+            // RightUpPanel
+            // 
+            this.RightUpPanel.Controls.Add(this.pie);
+            this.RightUpPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.RightUpPanel.Location = new System.Drawing.Point(0, 0);
+            this.RightUpPanel.Name = "RightUpPanel";
+            this.RightUpPanel.Size = new System.Drawing.Size(189, 102);
+            this.RightUpPanel.TabIndex = 0;
+            // 
+            // pie
+            // 
+            this.pie.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pie.Location = new System.Drawing.Point(0, 0);
+            this.pie.Name = "pie";
+            this.pie.Size = new System.Drawing.Size(189, 102);
+            this.pie.TabIndex = 0;
+            this.pie.Text = "pie";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.ItemsList);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(125, 418);
+            this.panel1.TabIndex = 2;
+            // 
+            // ItemsList
+            // 
+            this.ItemsList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ItemsList.FormattingEnabled = true;
+            this.ItemsList.Location = new System.Drawing.Point(0, 0);
+            this.ItemsList.Name = "ItemsList";
+            this.ItemsList.Size = new System.Drawing.Size(125, 418);
+            this.ItemsList.TabIndex = 1;
+            this.ItemsList.SelectedIndexChanged += new System.EventHandler(this.ItemsList_SelectedIndexChanged);
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1067, 554);
+            this.tabControl1.Size = new System.Drawing.Size(800, 450);
             this.tabControl1.TabIndex = 0;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "LiveCharts-диаграммы";
             this.tabPage1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.RightPanel.ResumeLayout(false);
-            this.RightUpPanel.ResumeLayout(false);
-            this.RightBottomPanel.ResumeLayout(false);
-            this.RightCentralPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.RightPanel.ResumeLayout(false);
+            this.RightCentralPanel.ResumeLayout(false);
+            this.RightBottomPanel.ResumeLayout(false);
+            this.RightUpPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -220,11 +205,11 @@ namespace ChartTest
         private SalesCartesianChart cartesian;
         private System.Windows.Forms.Panel RightPanel;
         private System.Windows.Forms.Panel RightCentralPanel;
-        private LiveCharts.WinForms.AngularGauge angularGauge1;
+        private LiveCharts.WinForms.AngularGauge angular;
         private System.Windows.Forms.Panel RightBottomPanel;
-        private LiveCharts.WinForms.SolidGauge solidGauge1;
+        private LiveCharts.WinForms.SolidGauge solid;
         private System.Windows.Forms.Panel RightUpPanel;
-        private LiveCharts.WinForms.PieChart pieChart1;
+        private SalesPieChart pie;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox ItemsList;
         private System.Windows.Forms.TabControl tabControl1;
