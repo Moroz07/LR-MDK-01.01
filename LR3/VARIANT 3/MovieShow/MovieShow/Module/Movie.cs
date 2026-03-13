@@ -16,7 +16,7 @@ namespace MovieShow
         private string photo_;
         private string genre_;
 
-        public Movie(string name,  int price, string director, string mainActor, DateTime enddate, string photo, string genre)
+        public Movie(string name, int price, string director, string mainActor, DateTime enddate, string photo, string genre)
         {
             name_ = name;
             price_ = price;
@@ -25,7 +25,7 @@ namespace MovieShow
             enddate_ = enddate;
             photo_ = photo;
             genre_ = genre;
-            
+
         }
 
         public string Name
@@ -39,12 +39,12 @@ namespace MovieShow
 
         public string MainActor
         { get { return mainActor_; } }
-        public DateTime Enddate 
+        public DateTime Enddate
         { get { return enddate_; } }
         public string Photo
         { get { return photo_; } }
 
-        public string Genre 
+        public string Genre
         { get { return genre_; } }
 
         public string GetInfo()
