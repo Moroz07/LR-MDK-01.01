@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35825.156 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDB", "TestDB\TestDB.csproj", "{4D66D16A-78B4-442B-A5D6-0C0EFC83CF0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBTestWinForm", "DBTestWinForm\DBTestWinForm.csproj", "{FA67FE36-5396-48A1-BC76-7880032E3A5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4D66D16A-78B4-442B-A5D6-0C0EFC83CF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D66D16A-78B4-442B-A5D6-0C0EFC83CF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D66D16A-78B4-442B-A5D6-0C0EFC83CF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D66D16A-78B4-442B-A5D6-0C0EFC83CF0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA67FE36-5396-48A1-BC76-7880032E3A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA67FE36-5396-48A1-BC76-7880032E3A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA67FE36-5396-48A1-BC76-7880032E3A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA67FE36-5396-48A1-BC76-7880032E3A5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F5208250-DCEF-43DA-96E9-466FF54953D2}
+		SolutionGuid = {73EEEEE5-B998-4A57-B943-7990425BD6C6}
 	EndGlobalSection
 EndGlobal

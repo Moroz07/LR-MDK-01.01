@@ -7,18 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
 
-namespace TestDB
+namespace DBTestWinForm
 {
-    public partial class MainForm: Form
+    public partial class AddForm: Form
     {
-        PGUsersLoader postgres = new PGUsersLoader();
-        public MainForm()
+        public AddForm()
         {
             InitializeComponent();
-            UsersDataGridView.DataSource = postgres.Load();
-            
+        }
+
+      
+
+        private void AddForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
