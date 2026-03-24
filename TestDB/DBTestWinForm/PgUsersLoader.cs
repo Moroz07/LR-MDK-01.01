@@ -11,7 +11,7 @@ namespace DBTestWinForm
 {
     public class PgUsersLoader
     {
-         private const string connectSetting = "Host=192.168.1.48;Username=st50-5;Password=505;Database=ProbTestt";
+         private const string connectSetting = "Host=192.168.1.48;Username=st56-11;Password=5611;Database=ProbTestt";
         private BindingList<User> allUsers_ = new BindingList<User>();
         public BindingList<User> Load() 
         {
@@ -100,20 +100,29 @@ namespace DBTestWinForm
         }
         public bool AddUser(User user)
         {
-            bool result = false;
-            var con = new NpgsqlConnection(connectSetting);
-            con.Open();
-            var sql =  "INSERT INTO myusers(login, password, name, age) VALUES(@login, @password, @name, @age)";
-            var cmd = new NpgsqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("@login", user.Login);
-            cmd.Parameters.AddWithValue("@password", user.Password);
-            cmd.Parameters.AddWithValue("@name", user.Name);
-            cmd.Parameters.AddWithValue("@age", user.Age);
-            int execute = cmd.ExecuteNonQuery();
-            if (execute > 0)
+            try
             {
-                result = true;
-                allUsers_.Add(user);
+                bool result = false;
+                var con = new NpgsqlConnection(connectSetting);
+                con.Open();
+                var sql = "INSERT INTO myusers(login, password, name, age) VALUES(@login, @password, @name, @age)";
+                var cmd = new NpgsqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@login", user.Login);
+                cmd.Parameters.AddWithValue("@password", user.Password);
+                cmd.Parameters.AddWithValue("@name", user.Name);
+                cmd.Parameters.AddWithValue("@age", user.Age);
+                int execute = cmd.ExecuteNonQuery();
+                if (execute > 0)
+                {
+                    result = true;
+                    allUsers_.Add(user);
+                }
+                return result;
+            }
+            catch (NpgsqlException exception)
+            {
+                MessageBox.Show($"Ошибка: {exception.Message}");
+                return false;
             }
         }
     }

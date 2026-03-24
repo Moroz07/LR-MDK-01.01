@@ -45,9 +45,10 @@
             // 
             // CreateButton
             // 
-            this.CreateButton.Location = new System.Drawing.Point(38, 310);
+            this.CreateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CreateButton.Location = new System.Drawing.Point(26, 315);
             this.CreateButton.Name = "CreateButton";
-            this.CreateButton.Size = new System.Drawing.Size(105, 45);
+            this.CreateButton.Size = new System.Drawing.Size(114, 27);
             this.CreateButton.TabIndex = 1;
             this.CreateButton.Text = "Добавить";
             this.CreateButton.UseVisualStyleBackColor = true;
@@ -55,9 +56,10 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(156, 310);
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteButton.Location = new System.Drawing.Point(146, 315);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(105, 45);
+            this.deleteButton.Size = new System.Drawing.Size(117, 27);
             this.deleteButton.TabIndex = 2;
             this.deleteButton.Text = "Удалить";
             this.deleteButton.UseVisualStyleBackColor = true;
@@ -65,15 +67,16 @@
             // 
             // clearbutton
             // 
-            this.clearbutton.Location = new System.Drawing.Point(277, 310);
+            this.clearbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clearbutton.Location = new System.Drawing.Point(269, 315);
             this.clearbutton.Name = "clearbutton";
-            this.clearbutton.Size = new System.Drawing.Size(105, 45);
+            this.clearbutton.Size = new System.Drawing.Size(127, 27);
             this.clearbutton.TabIndex = 3;
             this.clearbutton.Text = "Очистить всё";
             this.clearbutton.UseVisualStyleBackColor = true;
             this.clearbutton.Click += new System.EventHandler(this.clearbutton_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -82,7 +85,7 @@
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.CreateButton);
             this.Controls.Add(this.dataGridView);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);

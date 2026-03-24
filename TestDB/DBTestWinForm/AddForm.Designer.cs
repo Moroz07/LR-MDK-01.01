@@ -44,33 +44,39 @@
             // 
             // LoginTextBox
             // 
+            this.LoginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LoginTextBox.Location = new System.Drawing.Point(144, 30);
             this.LoginTextBox.Multiline = true;
             this.LoginTextBox.Name = "LoginTextBox";
-            this.LoginTextBox.Size = new System.Drawing.Size(121, 28);
+            this.LoginTextBox.Size = new System.Drawing.Size(181, 28);
             this.LoginTextBox.TabIndex = 0;
+            this.LoginTextBox.TextChanged += new System.EventHandler(this.LoginTextBox_TextChanged);
             // 
             // PasswordTextBox
             // 
+            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PasswordTextBox.Location = new System.Drawing.Point(144, 98);
             this.PasswordTextBox.Multiline = true;
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(121, 28);
+            this.PasswordTextBox.Size = new System.Drawing.Size(181, 28);
             this.PasswordTextBox.TabIndex = 1;
+            this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
             // 
             // NameTextBox
             // 
+            this.NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameTextBox.Location = new System.Drawing.Point(144, 64);
             this.NameTextBox.Multiline = true;
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(121, 28);
+            this.NameTextBox.Size = new System.Drawing.Size(181, 28);
             this.NameTextBox.TabIndex = 2;
+            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(61, 30);
+            this.label1.Location = new System.Drawing.Point(6, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 4;
@@ -80,7 +86,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(49, 64);
+            this.label2.Location = new System.Drawing.Point(6, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 20);
             this.label2.TabIndex = 5;
@@ -90,7 +96,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(44, 130);
+            this.label3.Location = new System.Drawing.Point(6, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 20);
             this.label3.TabIndex = 6;
@@ -100,7 +106,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(76, 98);
+            this.label4.Location = new System.Drawing.Point(6, 101);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 20);
             this.label4.TabIndex = 7;
@@ -108,37 +114,55 @@
             // 
             // Addbutton
             // 
-            this.Addbutton.Location = new System.Drawing.Point(10, 181);
+            this.Addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Addbutton.Location = new System.Drawing.Point(39, 208);
             this.Addbutton.Name = "Addbutton";
             this.Addbutton.Size = new System.Drawing.Size(93, 26);
             this.Addbutton.TabIndex = 8;
             this.Addbutton.Text = "Oк";
             this.Addbutton.UseVisualStyleBackColor = true;
+            this.Addbutton.Click += new System.EventHandler(this.Addbutton_Click);
             // 
             // AcceptButton
             // 
-            this.AcceptButton.Location = new System.Drawing.Point(109, 181);
+            this.AcceptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AcceptButton.Location = new System.Drawing.Point(245, 208);
             this.AcceptButton.Name = "AcceptButton";
-            this.AcceptButton.Size = new System.Drawing.Size(97, 26);
+            this.AcceptButton.Size = new System.Drawing.Size(109, 26);
             this.AcceptButton.TabIndex = 9;
             this.AcceptButton.Text = "Применить";
             this.AcceptButton.UseVisualStyleBackColor = true;
+            this.AcceptButton.Click += new System.EventHandler(this.AcceptButton_Click);
             // 
             // CloseButton
             // 
-            this.CloseButton.Location = new System.Drawing.Point(212, 181);
+            this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CloseButton.Location = new System.Drawing.Point(138, 208);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(97, 26);
+            this.CloseButton.Size = new System.Drawing.Size(101, 26);
             this.CloseButton.TabIndex = 10;
             this.CloseButton.Text = "Отмена";
             this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // AgeNumericUpDown
             // 
+            this.AgeNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AgeNumericUpDown.Location = new System.Drawing.Point(145, 130);
+            this.AgeNumericUpDown.Minimum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            0});
             this.AgeNumericUpDown.Name = "AgeNumericUpDown";
-            this.AgeNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.AgeNumericUpDown.Size = new System.Drawing.Size(180, 26);
             this.AgeNumericUpDown.TabIndex = 11;
+            this.AgeNumericUpDown.Value = new decimal(new int[] {
+            18,
+            0,
+            0,
+            0});
+            this.AgeNumericUpDown.ValueChanged += new System.EventHandler(this.AgeNumericUpDown_ValueChanged);
             // 
             // AddForm
             // 
