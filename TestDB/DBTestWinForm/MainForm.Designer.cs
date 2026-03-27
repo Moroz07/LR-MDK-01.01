@@ -32,6 +32,7 @@
             this.CreateButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.clearbutton = new System.Windows.Forms.Button();
+            this.EditButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,13 +41,13 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(0, 0);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(800, 277);
+            this.dataGridView.Size = new System.Drawing.Size(800, 375);
             this.dataGridView.TabIndex = 0;
             // 
             // CreateButton
             // 
-            this.CreateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CreateButton.Location = new System.Drawing.Point(26, 315);
+            this.CreateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CreateButton.Location = new System.Drawing.Point(298, 411);
             this.CreateButton.Name = "CreateButton";
             this.CreateButton.Size = new System.Drawing.Size(114, 27);
             this.CreateButton.TabIndex = 1;
@@ -56,8 +57,8 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.deleteButton.Location = new System.Drawing.Point(146, 315);
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteButton.Location = new System.Drawing.Point(538, 411);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(117, 27);
             this.deleteButton.TabIndex = 2;
@@ -67,8 +68,8 @@
             // 
             // clearbutton
             // 
-            this.clearbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clearbutton.Location = new System.Drawing.Point(269, 315);
+            this.clearbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clearbutton.Location = new System.Drawing.Point(661, 411);
             this.clearbutton.Name = "clearbutton";
             this.clearbutton.Size = new System.Drawing.Size(127, 27);
             this.clearbutton.TabIndex = 3;
@@ -76,11 +77,23 @@
             this.clearbutton.UseVisualStyleBackColor = true;
             this.clearbutton.Click += new System.EventHandler(this.clearbutton_Click);
             // 
+            // EditButton
+            // 
+            this.EditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EditButton.Location = new System.Drawing.Point(418, 411);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(114, 27);
+            this.EditButton.TabIndex = 4;
+            this.EditButton.Text = "Редактировать";
+            this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.EditButton);
             this.Controls.Add(this.clearbutton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.CreateButton);
@@ -98,6 +111,7 @@
         private System.Windows.Forms.Button CreateButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button clearbutton;
+        private System.Windows.Forms.Button EditButton;
     }
 }
 

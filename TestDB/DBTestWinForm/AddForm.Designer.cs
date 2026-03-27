@@ -45,30 +45,30 @@
             // LoginTextBox
             // 
             this.LoginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LoginTextBox.Location = new System.Drawing.Point(144, 30);
+            this.LoginTextBox.Location = new System.Drawing.Point(99, 30);
             this.LoginTextBox.Multiline = true;
             this.LoginTextBox.Name = "LoginTextBox";
-            this.LoginTextBox.Size = new System.Drawing.Size(181, 28);
+            this.LoginTextBox.Size = new System.Drawing.Size(246, 28);
             this.LoginTextBox.TabIndex = 0;
             this.LoginTextBox.TextChanged += new System.EventHandler(this.LoginTextBox_TextChanged);
             // 
             // PasswordTextBox
             // 
             this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PasswordTextBox.Location = new System.Drawing.Point(144, 98);
+            this.PasswordTextBox.Location = new System.Drawing.Point(99, 98);
             this.PasswordTextBox.Multiline = true;
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(181, 28);
+            this.PasswordTextBox.Size = new System.Drawing.Size(246, 28);
             this.PasswordTextBox.TabIndex = 1;
             this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
             // 
             // NameTextBox
             // 
             this.NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameTextBox.Location = new System.Drawing.Point(144, 64);
+            this.NameTextBox.Location = new System.Drawing.Point(99, 64);
             this.NameTextBox.Multiline = true;
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(181, 28);
+            this.NameTextBox.Size = new System.Drawing.Size(246, 28);
             this.NameTextBox.TabIndex = 2;
             this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
@@ -115,7 +115,7 @@
             // Addbutton
             // 
             this.Addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Addbutton.Location = new System.Drawing.Point(39, 208);
+            this.Addbutton.Location = new System.Drawing.Point(4, 180);
             this.Addbutton.Name = "Addbutton";
             this.Addbutton.Size = new System.Drawing.Size(93, 26);
             this.Addbutton.TabIndex = 8;
@@ -126,7 +126,7 @@
             // AcceptButton
             // 
             this.AcceptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AcceptButton.Location = new System.Drawing.Point(245, 208);
+            this.AcceptButton.Location = new System.Drawing.Point(210, 180);
             this.AcceptButton.Name = "AcceptButton";
             this.AcceptButton.Size = new System.Drawing.Size(109, 26);
             this.AcceptButton.TabIndex = 9;
@@ -137,7 +137,7 @@
             // CloseButton
             // 
             this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CloseButton.Location = new System.Drawing.Point(138, 208);
+            this.CloseButton.Location = new System.Drawing.Point(103, 180);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(101, 26);
             this.CloseButton.TabIndex = 10;
@@ -148,14 +148,14 @@
             // AgeNumericUpDown
             // 
             this.AgeNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AgeNumericUpDown.Location = new System.Drawing.Point(145, 130);
+            this.AgeNumericUpDown.Location = new System.Drawing.Point(99, 130);
             this.AgeNumericUpDown.Minimum = new decimal(new int[] {
             18,
             0,
             0,
             0});
             this.AgeNumericUpDown.Name = "AgeNumericUpDown";
-            this.AgeNumericUpDown.Size = new System.Drawing.Size(180, 26);
+            this.AgeNumericUpDown.Size = new System.Drawing.Size(246, 26);
             this.AgeNumericUpDown.TabIndex = 11;
             this.AgeNumericUpDown.Value = new decimal(new int[] {
             18,
@@ -168,7 +168,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 246);
+            this.ClientSize = new System.Drawing.Size(356, 226);
             this.Controls.Add(this.AgeNumericUpDown);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.AcceptButton);
