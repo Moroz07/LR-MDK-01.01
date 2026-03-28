@@ -13,10 +13,11 @@ namespace TestFileStorage
 {
     public partial class Registration: Form
     {
-        private FileUserStorage registration = new FileUserStorage();
-        public Registration()
+        PgUsersLoader registration_;
+        public Registration(PgUsersLoader registration)
         {
             InitializeComponent();
+            registration_ = registration;
 
         }
 
@@ -31,15 +32,16 @@ namespace TestFileStorage
                 return;
             }
 
-            if (registration.UserVerification(login))
+            if (registration_.UserVerification(login))
             {
                 MessageBox.Show("Такой пользователь уже существует");
             }
             else
             {
-                if (registration.UserRegistration(user))
+                if (registration_.UserRegistration(user))
                 {
                     MessageBox.Show("Вы успешно зарегистрировались");
+                    this.Close();
                 }
             }
         }

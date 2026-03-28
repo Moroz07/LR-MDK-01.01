@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace TestFileStorage
 {
-    class FileUserStorage : IUsersInterface
+    public class FileUserStorage : IUsersInterface
     {
         public List<User> Load()
         {

@@ -42,7 +42,7 @@
             this.PasswordTextBox.Location = new System.Drawing.Point(212, 198);
             this.PasswordTextBox.Multiline = true;
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(148, 26);
+            this.PasswordTextBox.Size = new System.Drawing.Size(188, 26);
             this.PasswordTextBox.TabIndex = 1;
             // 
             // LoginLabel
@@ -84,7 +84,7 @@
             this.LoginComboBox.FormattingEnabled = true;
             this.LoginComboBox.Location = new System.Drawing.Point(212, 101);
             this.LoginComboBox.Name = "LoginComboBox";
-            this.LoginComboBox.Size = new System.Drawing.Size(148, 21);
+            this.LoginComboBox.Size = new System.Drawing.Size(188, 21);
             this.LoginComboBox.TabIndex = 5;
             // 
             // RegistrationButton
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 400);
+            this.ClientSize = new System.Drawing.Size(462, 400);
             this.Controls.Add(this.RegistrationButton);
             this.Controls.Add(this.LoginComboBox);
             this.Controls.Add(this.EnterButton);

@@ -13,8 +13,9 @@ namespace TestFileStorage
 {
     public partial class MainForm : Form
     {
-        private FileUserStorage authorization = new FileUserStorage();
+        public PgUsersLoader authorization = new PgUsersLoader();
         private List<string> logins = new List<string>();
+        
         public MainForm()
         {
             InitializeComponent();
@@ -62,8 +63,9 @@ namespace TestFileStorage
 
         private void RegistrationButton_Click(object sender, EventArgs e)
         {
-            Registration newForm = new Registration();
+            Registration newForm = new Registration(authorization);
             newForm.Show();
+            //logins.Add(LoginComboBox.SelectedIndex.ToString());    ДОДЕЛАТЬ ОБНОВЛЕНИЕ КОМБОБОКСА ПРИ ДОБАВЛЕНИИ ПОЛЬЗОВАТЕЛЯ
         }
     }
 }
