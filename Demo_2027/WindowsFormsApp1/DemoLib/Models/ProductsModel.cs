@@ -9,11 +9,21 @@ namespace DemoLib.Models
 
         public ProductsModel()
         {
-            data_.Add(new Product { Name = "abc", Category = "Мучные", Count = 10, Price = 100.0, Supplier = "Хлебзавод", Parts = "Хлеб, батон, багет, круасаны, пирожки",
-                ImagePath = "C:\\Users\\user\\Pictures\\Roblox\\kartinka1.png"
+            data_.Add(new Product { Name = "Женские босоножки «Черный кофе» со скульптурным каблуком", Category = "Кроссовки", Count = 10, Price = 1600.0, Supplier = "Топ-Топ", Parts = " 87% кожа, 11% текстиль, 2% синтетика" ,
+                ImagePath = "..\\..\\..\\Images\\IMG_WS_185528.png"
             });
-            data_.Add(new Product { Name = "xyz", Category = "Колбасы", Count = 10000, Price = 500.0, Supplier = "Беларусь", Parts = "Колбаса варёная, колбаса сырокопчёная",
-            ImagePath = "C:\\Users\\user\\Pictures\\Roblox\\telka.png"
+            data_.Add(new Product { Name = "Черные туфли в классическом стиле", Category = "Туфли", Count = 3, Price = 500.0, Supplier = "Барбари", Parts = "натуральная кожа ",
+            ImagePath = "..\\..\\..\\Images\\IMG_MSho_190514.png"
+            });
+            data_.Add(new Product
+            {
+                Name = "Черные туфли в классическом стиле",
+                Category = "Туфли",
+                Count = 7,
+                Price = 500.0,
+                Supplier = "Барбари",
+                Parts = "натуральная кожа ",
+                ImagePath = ""
             });
         }
 
