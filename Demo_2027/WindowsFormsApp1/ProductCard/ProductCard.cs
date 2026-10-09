@@ -7,6 +7,7 @@ namespace DemoUIComponents
 {
     public partial class ProductCard: UserControl, IProductsView
     {
+        private int count_;
         public ProductCard()
         {
             InitializeComponent();
@@ -20,6 +21,8 @@ namespace DemoUIComponents
 
         public void Show(Product product)
         {
+            count_ = product.Count;
+
             CategoryLabel.Text = product.Category;
             if (product.Count > 5)
             {
@@ -35,7 +38,7 @@ namespace DemoUIComponents
 
             if (product.ImagePath == "" || product.ImagePath == null)
             {
-                ImagePictureBox.ImageLocation = "C:\\П-40\\01.01\\Морозов\\Demo_2027\\WindowsFormsApp1\\Images\\picture.png";
+                ImagePictureBox.ImageLocation = "..\\..\\..\\Images\\picture.png";
             }
             else
             {
@@ -44,32 +47,25 @@ namespace DemoUIComponents
             
             if (product.Count <= 3)
             {
-                string hexColor = "#FF8080";
-                Color color = ColorTranslator.FromHtml(hexColor);
-                BackColor = color;
-                //if (ProductCard_MouseLeave)
-                //{
-                //    BackColor = color;
-                //}
-
+                BackColor = ColorTranslator.FromHtml("#FF8080");;
             }
 
         }
 
         private void ProductCard_MouseMove(object sender, MouseEventArgs e)
         {
-            string hexColor = "#70B2AF"; 
-            Color color = ColorTranslator.FromHtml(hexColor); 
-            BackColor = color;
+            BackColor = ColorTranslator.FromHtml("#70B2AF");
         }
 
         private void ProductCard_MouseLeave(object sender, System.EventArgs e)
         {
+            if (count_ <= 3)
+            {
+                BackColor = ColorTranslator.FromHtml("#FF8080");
+            }
+            else
+                BackColor = ColorTranslator.FromHtml("#D2F6E7");
 
-            string hexColor = "#D2F6E7";
-            Color color = ColorTranslator.FromHtml(hexColor);
-            BackColor = color;
-            
         }
 
         private void ProductCard_Paint(object sender, PaintEventArgs e)
