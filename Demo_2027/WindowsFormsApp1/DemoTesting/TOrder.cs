@@ -2,6 +2,7 @@
 using DemoLib.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using System.Net.Mail;
 
 namespace DemoTesting
 {
@@ -12,7 +13,42 @@ namespace DemoTesting
         public void TestTwoMonthsAgo()
         {
             ProductsModel model = new ProductsModel();
-            List<Product> data_ = model.Load();
+            model.LoadOrders().Clear();
+
+            List<Product> data = new List<Product>();
+
+            data.Add(new Product
+            {
+                Name = "Женские босоножки «Черный кофе» со скульптурным каблуком",
+                Category = "Кроссовки",
+                Count = 10,
+                Price = 1600.0,
+                Supplier = "Топ-Топ",
+                Parts = " 87% кожа, 11% текстиль, 2% синтетика",
+                ImagePath = "..\\..\\..\\Images\\IMG_WS_185528.png"
+            });
+            data.Add(new Product
+            {
+                Name = "Черные туфли в классическом стиле",
+                Category = "Туфли",
+                Count = 3,
+                Price = 500.0,
+                Supplier = "Барбари",
+                Parts = "натуральная кожа",
+                ImagePath = "..\\..\\..\\Images\\IMG_MSho_190514.png"
+            });
+            data.Add(new Product
+            {
+                Name = "Кеды",
+                Category = "Туфли",
+                Count = 7,
+                Price = 600.0,
+                Supplier = "Барбари",
+                Parts = "натуральная кожа",
+                ImagePath = ""
+            });
+
+            model.UpdateListModel(data);
 
             List<double> expectedPrices = new List<double>();
 
@@ -35,7 +71,7 @@ namespace DemoTesting
             order_2.Items = new List<OrderItem>();
             order_2.Items.Add(new OrderItem
             {
-                ProductItem = "Женские босоножки «Черный кофе» со скульптурным каблуком",
+                ProductItem = "Черные туфли в классическом стиле",
                 Count = 10,
                 SaleDate = new System.DateTime(2026, 8, 10)
             });
@@ -54,9 +90,9 @@ namespace DemoTesting
 
             model.UpdatePrices(allOrder);
 
-            for (int i = 0; i < data_.Count; i++)
+            for (int i = 0; i < data.Count; i++)
             {
-                Assert.AreNotEqual(expectedPrices[i], data_[i].Price );
+                Assert.AreNotEqual(expectedPrices[i], data[i].Price);
             }
         }
 
@@ -64,7 +100,43 @@ namespace DemoTesting
         public void TestOneMonth()
         {
             ProductsModel model = new ProductsModel();
-            List<Product> data_ = model.Load();
+            model.LoadOrders().Clear();
+
+            List<Product> data = new List<Product>();
+
+            data.Add(new Product
+            {
+                Name = "Женские босоножки «Черный кофе» со скульптурным каблуком",
+                Category = "Кроссовки",
+                Count = 10,
+                Price = 1600.0,
+                Supplier = "Топ-Топ",
+                Parts = " 87% кожа, 11% текстиль, 2% синтетика",
+                ImagePath = "..\\..\\..\\Images\\IMG_WS_185528.png"
+            });
+            data.Add(new Product
+            {
+                Name = "Черные туфли в классическом стиле",
+                Category = "Туфли",
+                Count = 3,
+                Price = 500.0,
+                Supplier = "Барбари",
+                Parts = "натуральная кожа",
+                ImagePath = "..\\..\\..\\Images\\IMG_MSho_190514.png"
+            });
+            data.Add(new Product
+            {
+                Name = "Кеды",
+                Category = "Туфли",
+                Count = 7,
+                Price = 600.0,
+                Supplier = "Барбари",
+                Parts = "натуральная кожа",
+                ImagePath = ""
+            });
+
+            model.UpdateListModel(data);
+
             List<double> expectedPrices = new List<double>();
             expectedPrices.Add(1600.0);
             expectedPrices.Add(500);
@@ -97,16 +169,51 @@ namespace DemoTesting
             allOrder.Add(order_1);
             allOrder.Add(order_2);
             model.UpdatePrices(allOrder);
-            for (int i = 0; i < data_.Count; i++)
+            for (int i = 0; i < data.Count; i++)
             {
-                Assert.AreEqual(expectedPrices[i], data_[i].Price);
+                Assert.AreEqual(expectedPrices[i], data[i].Price);
             }
         }
         [TestMethod]
         public void TestThreeDifMonths()
         {
             ProductsModel model = new ProductsModel();
-            List<Product> data_ = model.Load();
+            model.LoadOrders().Clear();
+
+            List<Product> data = new List<Product>();
+
+            data.Add(new Product
+            {
+                Name = "Женские босоножки «Черный кофе» со скульптурным каблуком",
+                Category = "Кроссовки",
+                Count = 10,
+                Price = 1600.0,
+                Supplier = "Топ-Топ",
+                Parts = " 87% кожа, 11% текстиль, 2% синтетика",
+                ImagePath = "..\\..\\..\\Images\\IMG_WS_185528.png"
+            });
+            data.Add(new Product
+            {
+                Name = "Черные туфли в классическом стиле",
+                Category = "Туфли",
+                Count = 3,
+                Price = 500.0,
+                Supplier = "Барбари",
+                Parts = "натуральная кожа",
+                ImagePath = "..\\..\\..\\Images\\IMG_MSho_190514.png"
+            });
+            data.Add(new Product
+            {
+                Name = "Кеды",
+                Category = "Туфли",
+                Count = 7,
+                Price = 600.0,
+                Supplier = "Барбари",
+                Parts = "натуральная кожа",
+                ImagePath = ""
+            });
+
+            model.UpdateListModel(data);
 
             List<double> expectedPrices = new List<double>();
 
@@ -152,15 +259,50 @@ namespace DemoTesting
 
             model.UpdatePrices(allOrder);
 
-            Assert.AreEqual(expectedPrices[0], data_[0].Price);
-            Assert.AreEqual(expectedPrices[1], data_[1].Price);
-            Assert.AreEqual(expectedPrices[2], data_[2].Price);
+            Assert.AreEqual(expectedPrices[0], data[0].Price);
+            Assert.AreEqual(expectedPrices[1], data[1].Price);
+            Assert.AreEqual(expectedPrices[2], data[2].Price);
         }
         [TestMethod]
         public void TestCalcDiscount()
         {
             ProductsModel model = new ProductsModel();
-            List<Product> data_ = model.Load();
+            model.LoadOrders().Clear();
+
+            List<Product> data = new List<Product>();
+
+            data.Add(new Product
+            {
+                Name = "Женские босоножки «Черный кофе» со скульптурным каблуком",
+                Category = "Кроссовки",
+                Count = 10,
+                Price = 1600.0,
+                Supplier = "Топ-Топ",
+                Parts = " 87% кожа, 11% текстиль, 2% синтетика",
+                ImagePath = "..\\..\\..\\Images\\IMG_WS_185528.png"
+            });
+            data.Add(new Product
+            {
+                Name = "Черные туфли в классическом стиле",
+                Category = "Туфли",
+                Count = 3,
+                Price = 500.0,
+                Supplier = "Барбари",
+                Parts = "натуральная кожа",
+                ImagePath = "..\\..\\..\\Images\\IMG_MSho_190514.png"
+            });
+            data.Add(new Product
+            {
+                Name = "Кеды",
+                Category = "Туфли",
+                Count = 7,
+                Price = 600.0,
+                Supplier = "Барбари",
+                Parts = "натуральная кожа",
+                ImagePath = ""
+            });
+
+            model.UpdateListModel(data);
 
             List<double> expectedPrices = new List<double>();
 
@@ -206,15 +348,50 @@ namespace DemoTesting
 
             model.UpdatePrices(allOrder);
 
-            Assert.AreEqual(expectedPrices[0], data_[0].Price);
-            Assert.AreEqual(expectedPrices[1], data_[1].Price);
-            Assert.AreEqual(expectedPrices[2], data_[2].Price);
+            Assert.AreEqual(expectedPrices[0], data[0].Price);
+            Assert.AreEqual(expectedPrices[1], data[1].Price);
+            Assert.AreEqual(expectedPrices[2], data[2].Price);
         }
         [TestMethod]
         public void TestSaleOnFirstDayOfLastMonthNoDiscount()
         {
             ProductsModel model = new ProductsModel();
-            List<Product> data_ = model.Load();
+            model.LoadOrders().Clear();
+
+            List<Product> data = new List<Product>();
+
+            data.Add(new Product
+            {
+                Name = "Женские босоножки «Черный кофе» со скульптурным каблуком",
+                Category = "Кроссовки",
+                Count = 10,
+                Price = 1600.0,
+                Supplier = "Топ-Топ",
+                Parts = " 87% кожа, 11% текстиль, 2% синтетика",
+                ImagePath = "..\\..\\..\\Images\\IMG_WS_185528.png"
+            });
+            data.Add(new Product
+            {
+                Name = "Черные туфли в классическом стиле",
+                Category = "Туфли",
+                Count = 3,
+                Price = 500.0,
+                Supplier = "Барбари",
+                Parts = "натуральная кожа",
+                ImagePath = "..\\..\\..\\Images\\IMG_MSho_190514.png"
+            });
+            data.Add(new Product
+            {
+                Name = "Кеды",
+                Category = "Туфли",
+                Count = 7,
+                Price = 600.0,
+                Supplier = "Барбари",
+                Parts = "натуральная кожа",
+                ImagePath = ""
+            });
+
+            model.UpdateListModel(data);
 
             List<double> expectedPrices = new List<double>();
 
@@ -248,8 +425,8 @@ namespace DemoTesting
             allOrder.Add(order_2);           
             model.UpdatePrices(allOrder);
 
-            Assert.AreEqual(expectedPrices[0], data_[0].Price);
-            Assert.AreEqual(expectedPrices[1], data_[1].Price);           
+            Assert.AreEqual(expectedPrices[0], data[0].Price);
+            Assert.AreEqual(expectedPrices[1], data[1].Price);           
         }
     }
 }

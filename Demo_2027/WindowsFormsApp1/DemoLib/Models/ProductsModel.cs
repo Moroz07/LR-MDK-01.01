@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 
 namespace DemoLib.Models
@@ -42,41 +43,46 @@ namespace DemoLib.Models
                 ImagePath = ""
             });
 
-            //Order order_1 = new Order();
+            Order order_1 = new Order();
 
-            //order_1.Items = new List<OrderItem>();
-            //order_1.Items.Add(new OrderItem
-            //{
-            //    ProductItem = "Женские босоножки «Черный кофе» со скульптурным каблуком",
-            //    Count = 10,
-            //    SaleDate = new System.DateTime(2026, 8, 10)
-            //});
-            //Order order_2 = new Order();
+            order_1.Items = new List<OrderItem>();
+            order_1.Items.Add(new OrderItem
+            {
+                ProductItem = "Женские босоножки «Черный кофе» со скульптурным каблуком",
+                Count = 10,
+                SaleDate = new System.DateTime(2026, 8, 10)
+            });
+            Order order_2 = new Order();
 
-            //order_2.Items = new List<OrderItem>();
-            //order_2.Items.Add(new OrderItem
-            //{
-            //    ProductItem = "Черные туфли в классическом стиле",
-            //    Count = 10,
-            //    SaleDate = new System.DateTime(2026, 9, 10)
-            //});
-            //Order order_3 = new Order();
+            order_2.Items = new List<OrderItem>();
+            order_2.Items.Add(new OrderItem
+            {
+                ProductItem = "Черные туфли в классическом стиле",
+                Count = 10,
+                SaleDate = new System.DateTime(2026, 9, 10)
+            });
+            Order order_3 = new Order();
 
-            //order_3.Items = new List<OrderItem>();
-            //order_3.Items.Add(new OrderItem
-            //{
-            //    ProductItem = "Кеды",
-            //    Count = 10,
-            //    SaleDate = new System.DateTime(2026, 10, 10)
-            //});
-            //orders_.Add(order_1);
-            //orders_.Add(order_2);
-            //orders_.Add(order_3);
+            order_3.Items = new List<OrderItem>();
+            order_3.Items.Add(new OrderItem
+            {
+                ProductItem = "Кеды",
+                Count = 10,
+                SaleDate = new System.DateTime(2026, 10, 10)
+            });
+            orders_.Add(order_1);
+            orders_.Add(order_2);
+            orders_.Add(order_3);
 
-            //UpdatePrices(orders_);
+            UpdatePrices(orders_);
         }
 
 
+        public void UpdateListModel(List<Product> Artem)
+        {
+            data_.Clear();
+            data_ = Artem;
+        }
         public List<Product> Load()
         {
             return data_;
@@ -99,29 +105,13 @@ namespace DemoLib.Models
             DateTime start = new DateTime(prevMontsDate.Year, prevMontsDate.Month, 1); // 01.09.2026
             DateTime end = new DateTime(prevMontsDate.Year, prevMontsDate.Month + 1, 1).AddDays(-1); // 30.09.2026
 
-            List<Product> discountProducts = new List<Product>();
-            foreach (Product product in data_)
-            {
-                int countPrevMonthOrders = 0;
-                foreach (Order order in orders)
-                {
-                    foreach (OrderItem orderItem in order.Items)
-                    {
-                        if (orderItem.ProductItem == product.Name)
-                        {
-                            if (orderItem.SaleDate >= start && orderItem.SaleDate <= end)
-                            {
-                                ++countPrevMonthOrders;
-                            }
-                        }
-                    }
-                }
-
-                if (countPrevMonthOrders == 0)
-                {
-                    discountProducts.Add(product);
-                }
-            }
+            List<Product> discountProducts = data_
+                .Where(product => !orders
+                    .SelectMany(order => order.Items)
+                    .Any(item => item.ProductItem == product.Name
+                    && item.SaleDate >= start
+                    && item.SaleDate <= end))
+                .ToList();
 
             foreach (Product product in discountProducts)
             {
