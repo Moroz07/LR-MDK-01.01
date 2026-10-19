@@ -9,9 +9,13 @@ namespace DemoLib.Models
     {
         private List<Product> data_ = new List<Product>();
         private List<Order> orders_ = new List<Order>();
+        IOrderRepository repository_;
 
-        public ProductsModel()
+
+        public ProductsModel(IOrderRepository repository)
         {
+            repository_ = repository;
+
             data_.Add(new Product
             {
                 Name = "Женские босоножки «Черный кофе» со скульптурным каблуком",
@@ -43,44 +47,45 @@ namespace DemoLib.Models
                 ImagePath = ""
             });
 
-            Order order_1 = new Order();
+            orders_ = repository_.Load();
 
-            order_1.Items = new List<OrderItem>();
-            order_1.Items.Add(new OrderItem
-            {
-                ProductItem = "Женские босоножки «Черный кофе» со скульптурным каблуком",
-                Count = 10,
-                SaleDate = new System.DateTime(2026, 8, 10)
-            });
-            Order order_2 = new Order();
+            //Order order_1 = new Order();
 
-            order_2.Items = new List<OrderItem>();
-            order_2.Items.Add(new OrderItem
-            {
-                ProductItem = "Черные туфли в классическом стиле",
-                Count = 10,
-                SaleDate = new System.DateTime(2026, 9, 10)
-            });
-            Order order_3 = new Order();
+            //order_1.Items = new List<OrderItem>();
+            //order_1.Items.Add(new OrderItem
+            //{
+            //    ProductItem = "Женские босоножки «Черный кофе» со скульптурным каблуком",
+            //    Count = 10,
+            //    SaleDate = new System.DateTime(2026, 8, 10)
+            //});
+            //Order order_2 = new Order();
 
-            order_3.Items = new List<OrderItem>();
-            order_3.Items.Add(new OrderItem
-            {
-                ProductItem = "Кеды",
-                Count = 10,
-                SaleDate = new System.DateTime(2026, 10, 10)
-            });
-            orders_.Add(order_1);
-            orders_.Add(order_2);
-            orders_.Add(order_3);
+            //order_2.Items = new List<OrderItem>();
+            //order_2.Items.Add(new OrderItem
+            //{
+            //    ProductItem = "Черные туфли в классическом стиле",
+            //    Count = 10,
+            //    SaleDate = new System.DateTime(2026, 9, 10)
+            //});
+            //Order order_3 = new Order();
 
-            UpdatePrices(orders_);
+            //order_3.Items = new List<OrderItem>();
+            //order_3.Items.Add(new OrderItem
+            //{
+            //    ProductItem = "Кеды",
+            //    Count = 10,
+            //    SaleDate = new System.DateTime(2026, 10, 10)
+            //});
+            //orders_.Add(order_1);
+            //orders_.Add(order_2);
+            //orders_.Add(order_3);
+
+            
         }
 
 
         public void UpdateListModel(List<Product> Artem)
         {
-            data_.Clear();
             data_ = Artem;
         }
         public List<Product> Load()

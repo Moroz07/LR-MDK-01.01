@@ -12,7 +12,9 @@ namespace DemoTesting
         [TestMethod]
         public void TestTwoMonthsAgo()
         {
-            ProductsModel model = new ProductsModel();
+            IOrderRepository repository = new MemoryOrderRepository();
+            ProductsModel model = new ProductsModel(repository);
+            
             model.LoadOrders().Clear();
 
             List<Product> data = new List<Product>();
@@ -99,7 +101,9 @@ namespace DemoTesting
         [TestMethod]
         public void TestOneMonth()
         {
-            ProductsModel model = new ProductsModel();
+            IOrderRepository repository = new MemoryOrderRepository();
+            ProductsModel model = new ProductsModel(repository);
+            
             model.LoadOrders().Clear();
 
             List<Product> data = new List<Product>();
@@ -177,7 +181,8 @@ namespace DemoTesting
         [TestMethod]
         public void TestThreeDifMonths()
         {
-            ProductsModel model = new ProductsModel();
+            IOrderRepository repository = new MemoryOrderRepository();
+            ProductsModel model = new ProductsModel(repository);
             model.LoadOrders().Clear();
 
             List<Product> data = new List<Product>();
@@ -266,7 +271,8 @@ namespace DemoTesting
         [TestMethod]
         public void TestCalcDiscount()
         {
-            ProductsModel model = new ProductsModel();
+            IOrderRepository repository = new MemoryOrderRepository();
+            ProductsModel model = new ProductsModel(repository);
             model.LoadOrders().Clear();
 
             List<Product> data = new List<Product>();
@@ -355,7 +361,8 @@ namespace DemoTesting
         [TestMethod]
         public void TestSaleOnFirstDayOfLastMonthNoDiscount()
         {
-            ProductsModel model = new ProductsModel();
+            IOrderRepository repository = new MemoryOrderRepository();
+            ProductsModel model = new ProductsModel(repository);
             model.LoadOrders().Clear();
 
             List<Product> data = new List<Product>();
