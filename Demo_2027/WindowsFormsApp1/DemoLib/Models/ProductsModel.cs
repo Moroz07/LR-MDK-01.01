@@ -80,7 +80,7 @@ namespace DemoLib.Models
             //orders_.Add(order_2);
             //orders_.Add(order_3);
 
-            
+            UpdatePrices(orders_);
         }
 
 
